@@ -14,7 +14,7 @@ Car Sharing Application — это простое веб-приложение, �
 ```bash
 git clone https://github.com/DeFoldik/Carsharing.git
 cd Carsharing
-
+```
 ## Использование
 
 ### Эндпоинты API
@@ -80,10 +80,10 @@ cd Carsharing
 - **Получение всех автомобилей**:
   ```bash
   curl -X GET http://localhost:8080/cars
-
+```
 - **Фильтрация автомобилей по бренду**:
   ```bash
   curl -X GET "http://localhost:8080/cars?brand=Toyota"
-
+```
 
 
