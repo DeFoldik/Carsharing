@@ -38,13 +38,11 @@ cd Carsharing
          "id": "1",
          "brand": "Toyota",
          "model": "Camry",
-         "year": 2020
        },
        {
          "id": "2",
          "brand": "Honda",
          "model": "Civic",
-         "year": 2019
        }
      ]
      ```
@@ -65,13 +63,6 @@ cd Carsharing
        "id": "1",
        "brand": "Toyota",
        "model": "Camry",
-       "year": 2020
-     }
-     ```
-   - **Ошибка**: Если автомобиль с указанным ID не найден, вернется сообщение об ошибке с кодом 404:
-     ```json
-     {
-       "error": "Car not found with ID: 99"
      }
      ```
 
