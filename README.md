@@ -80,10 +80,10 @@ cd Carsharing
 - **Получение всех автомобилей**:
   ```bash
   curl -X GET http://localhost:8080/cars
-```
+  ```
 - **Фильтрация автомобилей по бренду**:
   ```bash
   curl -X GET "http://localhost:8080/cars?brand=Toyota"
-```
+  ```
 
 
