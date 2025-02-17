@@ -26,7 +26,7 @@ public class CarController {
         if (brand != null) {
             return allCars.stream()
                     .filter(car -> car.getBrand().equalsIgnoreCase(brand))
-                    .collect(Collectors.toList());
+                    .toList();
         }
         return allCars;
     }
