@@ -4,7 +4,6 @@ import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.service.CarService;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/cars")
 public class CarController {
 
-    @Autowired
-    private CarService carService;
+    private final CarService carService;
+
+    public CarController(CarService carService) {
+        this.carService = carService;
+    }
 
     @GetMapping
     public List<Car> getCars(@RequestParam(required = false) String brand) {

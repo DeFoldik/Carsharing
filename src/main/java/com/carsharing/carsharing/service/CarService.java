@@ -9,8 +9,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class CarService {
 
-    @Autowired
-    private CarRepository carRepository;
+    private final CarRepository carRepository;
+
+    // Инъекция через конструктор
+    public CarService(CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
 
     public List<Car> getAllCars() {
         return carRepository.findAll();
