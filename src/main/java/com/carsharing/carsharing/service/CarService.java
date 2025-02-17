@@ -10,7 +10,6 @@ public class CarService {
 
     private final CarRepository carRepository;
 
-    // Инъекция через конструктор
     public CarService(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
