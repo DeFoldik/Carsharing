@@ -5,7 +5,7 @@ import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.repository.CarRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
-//ъ
+
 @Service
 public class CarService {
 
