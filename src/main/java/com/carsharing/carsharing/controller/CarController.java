@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.controller;
 
+import com.carsharing.carsharing.exception.CarNotFound;
 import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.service.CarService;
 import java.util.List;
@@ -23,9 +24,13 @@ public class CarController {
     public List<Car> getCars(@RequestParam(required = false) String brand) {
         List<Car> allCars = carService.getAllCars();
         if (brand != null) {
-            return allCars.stream()
+            List<Car> filteredCars = allCars.stream()
                     .filter(car -> car.getBrand().equalsIgnoreCase(brand))
                     .toList();
+            if (filteredCars.isEmpty()) {
+                throw new CarNotFound("No cars found for brand: " + brand);
+            }
+            return filteredCars;
         }
         return allCars;
     }

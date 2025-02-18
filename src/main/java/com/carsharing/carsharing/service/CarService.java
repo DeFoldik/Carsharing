@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.service;
 
+import com.carsharing.carsharing.exception.CarNotFound;
 import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.repository.CarRepository;
 import java.util.List;
@@ -19,6 +20,11 @@ public class CarService {
     }
 
     public Car getCarById(String id) {
-        return carRepository.findById(id);
+
+        Car car = carRepository.findById(id);
+        if (car == null) {
+            throw new CarNotFound("Car not found with ID: " + id);
+        }
+        return car;
     }
 }
