@@ -1,7 +1,7 @@
 package com.carsharing.carsharing.repository;
 
 import com.carsharing.carsharing.model.Car;
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Repository;
 
@@ -26,4 +26,9 @@ public class CarRepository {
     public Car findById(String id) {
         return cars.stream().filter(car -> car.getId().equals(id)).findFirst().orElse(null);
     }
+}*/
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CarRepository extends JpaRepository<Car, String> {
 }
