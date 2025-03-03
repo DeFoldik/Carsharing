@@ -1,10 +1,6 @@
 package com.carsharing.carsharing.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.FetchType;
+import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.util.HashSet;
@@ -13,7 +9,9 @@ import java.util.Set;
 @Entity
 public class Car {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String brand;
     private String model;
 
@@ -22,7 +20,6 @@ public class Car {
     private Set<User> users = new HashSet<>();
 
     public Car(String id, String brand, String model) {
-        this.id = id;
         this.brand = brand;
         this.model = model;
     }
@@ -31,7 +28,7 @@ public class Car {
         // Пустой конструктор для JPA
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
@@ -43,7 +40,7 @@ public class Car {
         return model;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

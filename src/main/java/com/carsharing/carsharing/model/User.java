@@ -1,12 +1,6 @@
 package com.carsharing.carsharing.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.FetchType;
+import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.util.HashSet;
@@ -15,8 +9,12 @@ import java.util.Set;
 @Entity
 public class User {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
+    private String login;
+    private String password;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
@@ -27,21 +25,12 @@ public class User {
     //@JsonManagedReference
     private Set<Car> cars = new HashSet<>();
 
-    public User() {
-        // Пустой конструктор для JPA
-    }
-
-    public User(String id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(Long id) {
+        this.id = id; // Это поле больше не нужно устанавливать вручную
     }
 
     public String getName() {
@@ -50,6 +39,22 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Set<Car> getCars() {

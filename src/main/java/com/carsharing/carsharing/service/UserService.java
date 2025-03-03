@@ -26,6 +26,9 @@ public class UserService {
     }
 
     public User createUser(User user) {
+        if (userRepository.findByLogin(user.getLogin()) != null) {
+            throw new IllegalArgumentException("Пользователь с таким логином уже существует.");
+        }
         return userRepository.save(user);
     }
 

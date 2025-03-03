@@ -4,4 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.carsharing.carsharing.model.User;
 
 public interface UserRepository extends JpaRepository<User, String> {
+    User findByLogin(String login);
 }
