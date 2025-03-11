@@ -1,7 +1,6 @@
 package com.carsharing.carsharing.model;
 
-import jakarta.persistence.*;
-import java.util.List;
+import jakarta.persistence.Entity;
 
 @Entity
 public class Renter extends User {

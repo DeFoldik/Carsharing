@@ -3,8 +3,8 @@ package com.carsharing.carsharing.service;
 import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Owner;
 import com.carsharing.carsharing.repository.OwnerRepository;
-import org.springframework.stereotype.Service;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class OwnerService {
