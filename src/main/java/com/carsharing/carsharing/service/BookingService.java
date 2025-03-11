@@ -37,22 +37,26 @@ public class BookingService {
     }
 
     // Создание нового бронирования
-    public Booking createBooking(Long renterId, Long carId, Booking booking) {
+    public Booking createBooking(Long renterId, List<Long> carIds, Booking booking) {
         Renter renter = renterRepository.findById(renterId)
                 .orElseThrow(() -> new NotFound("Renter not found with ID: " + renterId));
 
-        Car car = carRepository.findById(carId)
-                .orElseThrow(() -> new NotFound("Car not found with ID: " + carId));
+        // Получаем машины по их ID
+        List<Car> cars = carRepository.findAllById(carIds);
+        if (cars.isEmpty()) {
+            throw new NotFound("Cars not found with provided IDs");
+        }
 
-        // Связываем арендатора и машину с бронированием
+        // Связываем арендатора и машины с бронированием
         booking.setRenter(renter);
-        booking.setCar(car);
+        booking.setCars(cars); // Используем setCars, а не setCar
 
         return bookingRepository.save(booking);
     }
 
     // Обновление бронирования по ID
-    public Booking updateBooking(Long id, Long renterId, Long carId, Booking bookingDetails) {
+    public Booking updateBooking(Long id, Long renterId, List<Long> carIds,
+                                 Booking bookingDetails) {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
 
@@ -63,11 +67,13 @@ public class BookingService {
             booking.setRenter(renter);
         }
 
-        // Если передана новая машина, обновляем только её, если не null
-        if (carId != null) {
-            Car car = carRepository.findById(carId)
-                    .orElseThrow(() -> new NotFound("Car not found with ID: " + carId));
-            booking.setCar(car);
+        // Если переданы новые машины, обновляем их
+        if (carIds != null && !carIds.isEmpty()) {
+            List<Car> cars = carRepository.findAllById(carIds);
+            if (cars.isEmpty()) {
+                throw new NotFound("Cars not found with the provided IDs");
+            }
+            booking.setCars(cars);
         }
 
         // Обновляем только даты, если они переданы
@@ -80,6 +86,7 @@ public class BookingService {
 
         return bookingRepository.save(booking);
     }
+
 
     // Удаление бронирования
     public void deleteBooking(Long id) {

@@ -16,9 +16,9 @@ public abstract class User {
 
     private String name;
 
-    public User() {}
+    protected User() {}
 
-    public User(String name) {
+    protected User(String name) {
         this.name = name;
     }
 

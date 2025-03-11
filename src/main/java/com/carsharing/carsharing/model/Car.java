@@ -7,8 +7,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Car {
@@ -25,6 +29,14 @@ public class Car {
     @JoinColumn(name = "owner_id")
     @JsonBackReference
     private Owner owner;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "car_booking",
+            joinColumns = @JoinColumn(name = "car_id"),
+            inverseJoinColumns = @JoinColumn(name = "booking_id")
+    )
+    private List<Booking> bookings = new ArrayList<>();
 
     public Car() {}
 
@@ -48,6 +60,14 @@ public class Car {
 
     public Owner getOwner() {
         return owner;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 
     public void setOwner(Owner owner) {
