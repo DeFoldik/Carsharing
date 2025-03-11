@@ -28,7 +28,8 @@ public class CarRepository {
     }
 }*/
 
+import com.carsharing.carsharing.model.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CarRepository extends JpaRepository<Car, String> {
+public interface CarRepository extends JpaRepository<Car, Long> {
 }

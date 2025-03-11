@@ -1,37 +1,31 @@
 package com.carsharing.carsharing.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.FetchType;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
-import java.util.HashSet;
-import java.util.Set;
+import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Car {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String brand;
     private String model;
 
-    @ManyToMany(mappedBy = "cars", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    //@JsonManagedReference
-    private Set<User> users = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    @JsonBackReference
+    private Owner owner;
 
-    public Car(String id, String brand, String model) {
-        this.id = id;
+    public Car() {}
+
+    public Car(String brand, String model, Owner owner) {
         this.brand = brand;
         this.model = model;
+        this.owner = owner;
     }
 
-    public Car() {
-        // Пустой конструктор для JPA
-    }
-
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
@@ -43,8 +37,12 @@ public class Car {
         return model;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 
     public void setBrand(String brand) {
@@ -54,13 +52,4 @@ public class Car {
     public void setModel(String model) {
         this.model = model;
     }
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
-
 }
