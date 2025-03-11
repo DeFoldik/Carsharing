@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/renters")
 public class RenterController {
+
     private final RenterService renterService;
 
     public RenterController(RenterService renterService) {

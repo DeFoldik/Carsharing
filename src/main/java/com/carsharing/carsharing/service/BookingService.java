@@ -4,9 +4,11 @@ import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.model.Renter;
+import com.carsharing.carsharing.model.User;
 import com.carsharing.carsharing.repository.BookingRepository;
+import com.carsharing.carsharing.repository.UserRepository;
 import com.carsharing.carsharing.repository.CarRepository;
-import com.carsharing.carsharing.repository.RenterRepository;
+
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -15,13 +17,13 @@ import org.springframework.stereotype.Service;
 public class BookingService {
 
     private final BookingRepository bookingRepository;
-    private final RenterRepository renterRepository;
+    private final UserRepository userRepository;
     private final CarRepository carRepository;
 
-    public BookingService(BookingRepository bookingRepository, RenterRepository renterRepository,
+    public BookingService(BookingRepository bookingRepository, UserRepository userRepository,
                           CarRepository carRepository) {
         this.bookingRepository = bookingRepository;
-        this.renterRepository = renterRepository;
+        this.userRepository = userRepository;
         this.carRepository = carRepository;
     }
 
@@ -38,7 +40,7 @@ public class BookingService {
 
     // Создание нового бронирования
     public Booking createBooking(Long renterId, List<Long> carIds, Booking booking) {
-        Renter renter = renterRepository.findById(renterId)
+        Renter renter = (Renter) userRepository.findById(renterId)
                 .orElseThrow(() -> new NotFound("Renter not found with ID: " + renterId));
 
         // Получаем машины по их ID
@@ -57,13 +59,22 @@ public class BookingService {
     // Обновление бронирования по ID
     public Booking updateBooking(Long id, Long renterId, List<Long> carIds,
                                  Booking bookingDetails) {
+        // Находим бронирование по ID
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
 
         // Если передан новый арендатор, обновляем только его, если не null
         if (renterId != null) {
-            Renter renter = renterRepository.findById(renterId)
-                    .orElseThrow(() -> new NotFound("Renter not found with ID: " + renterId));
+            // Находим пользователя по ID и проверяем, что это Renter
+            User user = userRepository.findById(renterId)
+                    .orElseThrow(() -> new NotFound("User not found with ID: " + renterId));
+
+            if (!(user instanceof Renter)) {
+                throw new NotFound("User with ID " + renterId + " is not a Renter");
+            }
+
+            // Приводим User к Renter
+            Renter renter = (Renter) user;
             booking.setRenter(renter);
         }
 
@@ -84,6 +95,7 @@ public class BookingService {
             booking.setEndDate(bookingDetails.getEndDate());
         }
 
+        // Сохраняем обновленное бронирование
         return bookingRepository.save(booking);
     }
 

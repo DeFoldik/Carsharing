@@ -3,8 +3,9 @@ package com.carsharing.carsharing.service;
 import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.model.Owner;
+import com.carsharing.carsharing.model.User;
 import com.carsharing.carsharing.repository.CarRepository;
-import com.carsharing.carsharing.repository.OwnerRepository;
+import com.carsharing.carsharing.repository.UserRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +13,11 @@ import org.springframework.stereotype.Service;
 public class CarService {
 
     private final CarRepository carRepository;
-    private final OwnerRepository ownerRepository;
+    private final UserRepository userRepository;
 
-    public CarService(CarRepository carRepository, OwnerRepository ownerRepository) {
+    public CarService(CarRepository carRepository, UserRepository userRepository) {
         this.carRepository = carRepository;
-        this.ownerRepository = ownerRepository;
+        this.userRepository = userRepository;
     }
 
     // Получаем все машины
@@ -37,8 +38,16 @@ public class CarService {
 
     // Добавление одной или нескольких машин
     public List<Car> createCars(List<Car> cars, Long ownerId) {
-        Owner owner = ownerRepository.findById(ownerId)
+        User user = userRepository.findById(ownerId)
                 .orElseThrow(() -> new NotFound("Owner not found with ID: " + ownerId));
+
+        // Проверяем, что пользователь является владельцем
+        if (!(user instanceof Owner)) {
+            throw new NotFound("User with ID " + ownerId + " is not an Owner");
+        }
+
+        // Приводим User к Owner
+        Owner owner = (Owner) user;
 
         // Привязываем владельца ко всем машинам
         for (Car car : cars) {
