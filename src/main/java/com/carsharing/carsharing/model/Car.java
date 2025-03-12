@@ -37,7 +37,6 @@ public class Car {
             joinColumns = @JoinColumn(name = "car_id"),
             inverseJoinColumns = @JoinColumn(name = "booking_id")
     )
-    @JsonManagedReference
     private List<Booking> bookings = new ArrayList<>();
 
     public Car() {}

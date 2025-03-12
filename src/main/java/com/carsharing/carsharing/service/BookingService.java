@@ -8,7 +8,7 @@ import com.carsharing.carsharing.model.User;
 import com.carsharing.carsharing.repository.BookingRepository;
 import com.carsharing.carsharing.repository.UserRepository;
 import com.carsharing.carsharing.repository.CarRepository;
-
+import jakarta.transaction.Transactional;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +26,7 @@ public class BookingService {
         this.userRepository = userRepository;
         this.carRepository = carRepository;
     }
-
+    @Transactional
     // Получение всех бронирований
     public List<Booking> getAllBookings() {
         return bookingRepository.findAll();
@@ -38,7 +38,7 @@ public class BookingService {
                 .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
     }
 
-    // Создание нового бронирования
+    @Transactional
     public Booking createBooking(Long renterId, List<Long> carIds, Booking booking) {
         Renter renter = (Renter) userRepository.findById(renterId)
                 .orElseThrow(() -> new NotFound("Renter not found with ID: " + renterId));
@@ -56,7 +56,6 @@ public class BookingService {
         return bookingRepository.save(booking);
     }
 
-    // Обновление бронирования по ID
     public Booking updateBooking(Long id, Long renterId, List<Long> carIds,
                                  Booking bookingDetails) {
         // Находим бронирование по ID
@@ -99,12 +98,24 @@ public class BookingService {
         return bookingRepository.save(booking);
     }
 
-
-    // Удаление бронирования
+    @Transactional
     public void deleteBooking(Long id) {
-        if (!bookingRepository.existsById(id)) {
-            throw new NotFound("Booking not found with ID: " + id);
+        // Находим бронь
+        Booking booking = bookingRepository.findById(id)
+                .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+
+        // Удаляем связи с машинами
+        for (Car car : booking.getCars()) {
+            car.getBookings().remove(booking); // Удаляем бронь из списка бронирований машины
         }
-        bookingRepository.deleteById(id);
+
+        // Очищаем список машин в брони
+        booking.getCars().clear();
+
+        // Сохраняем изменения (обновляем машины)
+        carRepository.saveAll(booking.getCars());
+
+        // Удаляем бронь
+        bookingRepository.delete(booking);
     }
 }

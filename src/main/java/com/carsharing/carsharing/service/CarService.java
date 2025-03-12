@@ -4,20 +4,26 @@ import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.model.Owner;
 import com.carsharing.carsharing.model.User;
+import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.repository.CarRepository;
 import com.carsharing.carsharing.repository.UserRepository;
-import java.util.List;
+import com.carsharing.carsharing.repository.BookingRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 public class CarService {
 
     private final CarRepository carRepository;
     private final UserRepository userRepository;
+    private final BookingRepository bookingRepository;
 
-    public CarService(CarRepository carRepository, UserRepository userRepository) {
+    public CarService(CarRepository carRepository, UserRepository userRepository, BookingRepository bookingRepository) {
         this.carRepository = carRepository;
         this.userRepository = userRepository;
+        this.bookingRepository = bookingRepository;
     }
 
     // Получаем все машины
@@ -71,11 +77,18 @@ public class CarService {
         return carRepository.save(car);
     }
 
-    // Удаление машины по ID
+    @Transactional
     public void deleteCar(Long id) {
-        if (!carRepository.existsById(id)) {
-            throw new NotFound("Car not found with ID: " + id);
+        Car car = carRepository.findById(id)
+                .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
+
+        // Удаляем все бронирования, связанные с машиной
+        List<Booking> bookings = bookingRepository.findByCars(car);
+        for (Booking booking : bookings) {
+            bookingRepository.delete(booking); // Удаляем бронирование
         }
+
+        // Удаляем машину
         carRepository.deleteById(id);
     }
 }
