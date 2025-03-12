@@ -1,17 +1,16 @@
 package com.carsharing.carsharing.service;
 
 import com.carsharing.carsharing.exception.NotFound;
+import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.model.Owner;
 import com.carsharing.carsharing.model.User;
-import com.carsharing.carsharing.model.Booking;
+import com.carsharing.carsharing.repository.BookingRepository;
 import com.carsharing.carsharing.repository.CarRepository;
 import com.carsharing.carsharing.repository.UserRepository;
-import com.carsharing.carsharing.repository.BookingRepository;
+import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Service
 public class CarService {
@@ -20,7 +19,8 @@ public class CarService {
     private final UserRepository userRepository;
     private final BookingRepository bookingRepository;
 
-    public CarService(CarRepository carRepository, UserRepository userRepository, BookingRepository bookingRepository) {
+    public CarService(CarRepository carRepository,
+                      UserRepository userRepository, BookingRepository bookingRepository) {
         this.carRepository = carRepository;
         this.userRepository = userRepository;
         this.bookingRepository = bookingRepository;

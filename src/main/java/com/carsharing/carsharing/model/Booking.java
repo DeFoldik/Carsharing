@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -7,10 +8,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -28,7 +27,6 @@ public class Booking {
     @JoinColumn(name = "renter_id")
     private Renter renter;
 
-    // Связь ManyToMany с Car, с ленивой загрузкой
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "car_booking",
@@ -46,7 +44,6 @@ public class Booking {
     @Future(message = "End date must be in the future")
     private LocalDate endDate;
 
-    // Геттеры и сеттеры
     public Long getId() {
         return id;
     }

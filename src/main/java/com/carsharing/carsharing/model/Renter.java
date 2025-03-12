@@ -1,7 +1,7 @@
 package com.carsharing.carsharing.model;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("RENTER")

@@ -1,8 +1,8 @@
 package com.carsharing.carsharing.controller;
 
-import jakarta.validation.Valid;
 import com.carsharing.carsharing.model.Owner;
 import com.carsharing.carsharing.service.OwnerService;
+import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

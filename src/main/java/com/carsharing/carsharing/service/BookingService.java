@@ -6,12 +6,11 @@ import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.model.Renter;
 import com.carsharing.carsharing.model.User;
 import com.carsharing.carsharing.repository.BookingRepository;
-import com.carsharing.carsharing.repository.UserRepository;
 import com.carsharing.carsharing.repository.CarRepository;
+import com.carsharing.carsharing.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import java.util.List;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class BookingService {
@@ -26,6 +25,7 @@ public class BookingService {
         this.userRepository = userRepository;
         this.carRepository = carRepository;
     }
+
     @Transactional
     // Получение всех бронирований
     public List<Booking> getAllBookings() {

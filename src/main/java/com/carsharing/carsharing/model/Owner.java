@@ -1,8 +1,8 @@
 package com.carsharing.carsharing.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
