@@ -3,6 +3,8 @@ package com.carsharing.carsharing.controller;
 import com.carsharing.carsharing.model.Renter;
 import com.carsharing.carsharing.service.RenterService;
 import java.util.List;
+
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +34,7 @@ public class RenterController {
     }
 
     @PostMapping
-    public Renter createRenter(@RequestBody Renter renter) {
+    public Renter createRenter(@Valid  @RequestBody Renter renter) {
         return renterService.createRenter(renter);
     }
 

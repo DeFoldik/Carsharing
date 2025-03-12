@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.controller;
 
+import jakarta.validation.Valid;
 import com.carsharing.carsharing.model.Owner;
 import com.carsharing.carsharing.service.OwnerService;
 import java.util.List;
@@ -31,7 +32,7 @@ public class OwnerController {
     }
 
     @PostMapping
-    public Owner createOwner(@RequestBody Owner owner) {
+    public Owner createOwner(@Valid @RequestBody Owner owner) {
         return ownerService.createOwner(owner);
     }
 

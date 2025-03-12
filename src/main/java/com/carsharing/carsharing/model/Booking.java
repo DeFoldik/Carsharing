@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -27,6 +28,7 @@ public class Booking {
 
     // Связь ManyToMany с Car, с ленивой загрузкой
     @ManyToMany(mappedBy = "bookings", fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Car> cars = new ArrayList<>();
 
     @NotNull(message = "Start date is required")
