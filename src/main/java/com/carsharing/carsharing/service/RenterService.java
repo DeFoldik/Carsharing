@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.service;
 
+import com.carsharing.carsharing.cache.UserCache;
 import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.model.Car;
@@ -15,10 +16,13 @@ public class RenterService {
 
     private final UserRepository userRepository;
     private final BookingRepository bookingRepository;
+    private final UserCache userCache;
 
-    public RenterService(UserRepository userRepository, BookingRepository bookingRepository) {
+    public RenterService(UserRepository userRepository, BookingRepository bookingRepository,
+                         UserCache userCache) {
         this.userRepository = userRepository;
         this.bookingRepository = bookingRepository;
+        this.userCache = userCache;
     }
 
     public List<Renter> getAllRenters() {
@@ -26,17 +30,28 @@ public class RenterService {
     }
 
     public Renter getRenterById(Long id) {
-        return userRepository.findRenterById(id)
-                .orElseThrow(() -> new NotFound("Renter not found with ID: " + id));
+        Renter renter = (Renter) userCache.get(id);
+        if (renter == null) {
+            renter = userRepository.findRenterById(id)
+                    .orElseThrow(() -> new NotFound("Renter not found with ID: " + id));
+            userCache.put(id, renter);
+        }
+        return renter;
     }
 
     public Renter createRenter(Renter renter) {
-        return userRepository.save(renter);
+        Renter savedRenter = userRepository.save(renter);
+        userCache.put(savedRenter.getId(), savedRenter);
+        return savedRenter;
     }
 
     public void deleteRenter(Long renterId) {
-        Renter renter = (Renter) userRepository.findById(renterId)
-                .orElseThrow(() -> new NotFound("Renter not found with ID: " + renterId));
+        Renter renter = (Renter) userCache.get(renterId);
+
+        if (renter == null) {
+            renter = (Renter) userRepository.findById(renterId)
+                    .orElseThrow(() -> new NotFound("Renter not found with ID: " + renterId));
+        }
 
         // Удаляем все бронирования этого рентора
         List<Booking> bookings = bookingRepository.findByRenter(renter);
@@ -48,18 +63,24 @@ public class RenterService {
             bookingRepository.delete(booking); // Удаляем саму бронь
         }
 
+        userCache.remove(renterId);
         userRepository.delete(renter); // Удаляем рентора
     }
 
     public Renter updateRenter(Long id, @Valid Renter renterDetails) {
-        Renter renter = (Renter) userRepository.findById(id)
-                .orElseThrow(() -> new NotFound("Renter not found with ID: " + id));
+        Renter renter = (Renter) userCache.get(id);
+
+        if (renter == null) {
+            renter = (Renter) userRepository.findById(id)
+                    .orElseThrow(() -> new NotFound("Renter not found with ID: " + id));
+        }
 
         // Обновляем имя рентера
         renter.setName(renterDetails.getName());
 
-        // Сохраняем обновленного рентера
-        return userRepository.save(renter);
+        Renter updatedRenter = userRepository.save(renter);
+        userCache.put(updatedRenter.getId(), updatedRenter);
+        return updatedRenter;
     }
 }
 

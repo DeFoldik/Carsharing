@@ -3,6 +3,9 @@ package com.carsharing.carsharing.controller;
 import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Car;
 import com.carsharing.carsharing.service.CarService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/cars")
+@Tag(name = "Автомобили", description = "Управление автомобилями")
 public class CarController {
 
     private final CarService carService;
@@ -27,6 +31,7 @@ public class CarController {
 
     // Получение всех машин или фильтрация по бренду
     @GetMapping
+    @Operation(summary = "Получить автомобили", description = "Возвращает автомобили")
     public List<Car> getCars(@RequestParam(required = false) String brand) {
         if (brand != null) {
             // Фильтрация по бренду
@@ -43,26 +48,49 @@ public class CarController {
 
     // Получение машины по ID
     @GetMapping("/{id}")
+    @Operation(summary = "Получить автомобиль по ID", description = "Возвращает автомобиль по идентификатору")
     public Car getCarById(@PathVariable Long id) {
         return carService.getCarById(id);
     }
 
     // Добавление одной или нескольких машин
     @PostMapping
+    @Operation(summary = "Выложить автомобиль", description = "Добавляет автомобиль")
     public List<Car> createCars(@RequestBody @Valid List<Car> cars, @RequestParam Long ownerId) {
         return carService.createCars(cars, ownerId);
     }
 
     // Обновление машины по ID
     @PutMapping("/{id}")
+    @Operation(summary = "Обновить автомобиль по ID", description = "Обновляет автомобиль по идентификатору")
     public Car updateCar(@PathVariable Long id, @RequestBody @Valid Car carDetails) {
         return carService.updateCar(id, carDetails);
     }
 
     // Удаление машины по ID
     @DeleteMapping("/{id}")
+    @Operation(summary = "Удалить автомобиль по ID", description = "Удаляет автомобиль по идентификатору")
     public void deleteCar(@PathVariable Long id) {
         carService.deleteCar(id);
+    }
+
+    // Получение машин по модели (JPQL)
+    @GetMapping("/by-model")
+    @Operation(summary = "Получить автомобили по модели", description = "Возвращает автомобили по идентификатору")
+    public List<Car> getCarsByModel(@RequestParam String model) {
+        return carService.getCarsByModel(model);
+    }
+
+    @GetMapping("/by-owner")
+    @Operation(summary = "Получить автомобили по владельцу", description = "Возвращает автомобили по владелицу")
+    public List<Car> getCarsByOwnerName(@RequestParam String ownerName) {
+        return carService.getCarsByOwnerName(ownerName);
+    }
+
+    @GetMapping("/by-owner-native")
+    @Operation(summary = "Получить автомобили по владельцу", description = "Возвращает автомобили по владелицу")
+    public List<Car> getCarsByOwnerNameNative(@RequestParam String ownerName) {
+        return carService.getCarsByOwnerNameNative(ownerName);
     }
 }
 

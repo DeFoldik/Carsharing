@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.service;
 
+import com.carsharing.carsharing.cache.UserCache;
 import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.model.Car;
@@ -17,12 +18,14 @@ public class OwnerService {
     private final UserRepository userRepository;
     private final CarRepository carRepository;
     private final BookingRepository bookingRepository;
+    private final UserCache userCache;
 
-    public OwnerService(UserRepository userRepository,
-                        CarRepository carRepository, BookingRepository bookingRepository) {
+    public OwnerService(UserRepository userRepository, CarRepository carRepository,
+                        BookingRepository bookingRepository, UserCache userCache) {
         this.userRepository = userRepository;
         this.carRepository = carRepository;
         this.bookingRepository = bookingRepository;
+        this.userCache = userCache;
     }
 
 
@@ -31,43 +34,60 @@ public class OwnerService {
     }
 
     public Owner getOwnerById(Long id) {
-        return userRepository.findOwnerById(id)
-                .orElseThrow(() -> new NotFound("Owner not found with ID: " + id));
+        Owner owner = (Owner) userCache.get(id);
+        if (owner == null) {
+            owner = userRepository.findOwnerById(id)
+                    .orElseThrow(() -> new NotFound("Owner not found with ID: " + id));
+            userCache.put(id, owner);
+        }
+        return owner;
     }
 
     public Owner createOwner(Owner owner) {
-        return userRepository.save(owner);
+        Owner savedOwner = userRepository.save(owner);
+        userCache.put(savedOwner.getId(), savedOwner);
+        return savedOwner;
     }
 
     @Transactional
     public void deleteOwner(Long id) {
-        Owner owner = (Owner) userRepository.findById(id)
-                .orElseThrow(() -> new NotFound("Owner not found with ID: " + id));
+        Owner owner = (Owner) userCache.get(id);
 
-        // Получаем все машины владельца
-        List<Car> cars = carRepository.findByOwner(owner);
-        if (cars.isEmpty()) {
-            throw new NotFound("No cars found for the owner with ID: " + id);
+        if (owner == null) {
+            owner = (Owner) userRepository.findById(id)
+                    .orElseThrow(() -> new NotFound("Owner not found with ID: " + id));
         }
 
-        // Удаляем все бронирования, связанные с машинами владельца
+        // Получаем машины владельца
+        List<Car> cars = carRepository.findByOwner(owner);
+
+        if (cars.isEmpty()) {
+            System.out.println("Owner ID: " + id + " has no cars, deleting owner only.");
+            userRepository.delete(owner); // Просто удаляем владельца
+            return;
+        }
+
+        // Удаляем бронирования, связанные с машинами владельца
         for (Car car : cars) {
             List<Booking> bookings = bookingRepository.findByCars(car);
-            for (Booking booking : bookings) {
-                bookingRepository.delete(booking); // Удаляем бронирования
-            }
+            bookingRepository.deleteAll(bookings);
         }
 
-        // Удаляем все машины владельца
+        // Удаляем машины владельца
         carRepository.deleteAll(cars);
 
         // Удаляем владельца
+        userCache.remove(id);
         userRepository.delete(owner);
     }
 
     public Owner updateOwner(Long id, @Valid Owner ownerDetails) {
-        Owner owner = (Owner) userRepository.findById(id)
-                .orElseThrow(() -> new NotFound("Owner not found with ID: " + id));
+        Owner owner = (Owner) userCache.get(id);
+
+        if (owner == null) {
+            owner = (Owner) userRepository.findById(id)
+                    .orElseThrow(() -> new NotFound("Owner not found with ID: " + id));
+        }
 
         // Обновляем имя владельца
         owner.setName(ownerDetails.getName());
@@ -78,7 +98,9 @@ public class OwnerService {
         }
 
         // Сохраняем обновленного владельца
-        return userRepository.save(owner);
+        Owner updatedOwner = userRepository.save(owner);
+        userCache.put(updatedOwner.getId(), updatedOwner);
+        return updatedOwner;
     }
 }
 

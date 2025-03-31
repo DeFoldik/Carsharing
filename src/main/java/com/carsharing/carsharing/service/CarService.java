@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.service;
 
+import com.carsharing.carsharing.cache.CarCache;
 import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.model.Car;
@@ -9,9 +10,12 @@ import com.carsharing.carsharing.repository.BookingRepository;
 import com.carsharing.carsharing.repository.CarRepository;
 import com.carsharing.carsharing.repository.UserRepository;
 import java.util.List;
+import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Slf4j
 @Service
 public class CarService {
 
@@ -19,11 +23,14 @@ public class CarService {
     private final UserRepository userRepository;
     private final BookingRepository bookingRepository;
 
-    public CarService(CarRepository carRepository,
-                      UserRepository userRepository, BookingRepository bookingRepository) {
+    private final CarCache carCache;
+
+    public CarService(CarRepository carRepository, UserRepository userRepository,
+                       BookingRepository bookingRepository, CarCache carCache) {
         this.carRepository = carRepository;
         this.userRepository = userRepository;
         this.bookingRepository = bookingRepository;
+        this.carCache = carCache;
     }
 
     // Получаем все машины
@@ -33,8 +40,16 @@ public class CarService {
 
     // Получаем машину по ID
     public Car getCarById(Long id) {
-        return carRepository.findById(id).orElseThrow(() ->
-                new NotFound("Car not found with ID: " + id));
+        //return carRepository.findById(id).orElseThrow(() ->
+        //new NotFound("Car not found with ID: " + id));
+        Car car = carCache.get(id);
+        if (car == null) {
+            log.info("Car with ID {} not found in cache, fetching from database", id);
+            car = carRepository.findById(id)
+                    .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
+            carCache.put(id, car);
+        }
+        return car;
     }
 
     // Получаем машины по бренду
@@ -42,8 +57,9 @@ public class CarService {
         return carRepository.findByBrandIgnoreCase(brand);
     }
 
-    // Добавление одной или нескольких машин
+    @Transactional
     public List<Car> createCars(List<Car> cars, Long ownerId) {
+
         User user = userRepository.findById(ownerId)
                 .orElseThrow(() -> new NotFound("Owner not found with ID: " + ownerId));
 
@@ -61,26 +77,44 @@ public class CarService {
         }
 
         // Сохраняем все машины
-        return carRepository.saveAll(cars);
+        List<Car> savedCars = carRepository.saveAll(cars);
+
+        // Добавляем сохраненные машины в кэш
+        for (Car car : savedCars) {
+            carCache.put(car.getId(), car);
+        }
+
+        return savedCars;
     }
 
-    // Обновление машины по ID
+    @Transactional
     public Car updateCar(Long id, Car carDetails) {
-        Car car = carRepository.findById(id)
-                .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
+        Car car = carCache.get(id);
+        if (car == null) {
+            car = carRepository.findById(id)
+                    .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
+        }
 
         // Обновляем поля машины
         car.setBrand(carDetails.getBrand());
         car.setModel(carDetails.getModel());
 
         // Сохраняем обновленную машину
-        return carRepository.save(car);
+        Car updatedCar = carRepository.save(car);
+
+        // Обновляем автомобиль в кэше
+        carCache.put(id, updatedCar);
+
+        return updatedCar;
     }
 
     @Transactional
     public void deleteCar(Long id) {
-        Car car = carRepository.findById(id)
-                .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
+        Car car = carCache.get(id);
+        if (car == null) {
+            car = carRepository.findById(id)
+                    .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
+        }
 
         // Удаляем все бронирования, связанные с машиной
         List<Booking> bookings = bookingRepository.findByCars(car);
@@ -88,9 +122,26 @@ public class CarService {
             bookingRepository.delete(booking); // Удаляем бронирование
         }
 
-        // Удаляем машину
+        // Удаляем машину из бд
         carRepository.deleteById(id);
+
+        // Удаляем машину из кэша
+        carCache.remove(id);
     }
+
+    // Получение машин по модели (JPQL)
+    public List<Car> getCarsByModel(String model) {
+        return carRepository.findByModel(model);
+    }
+    public List<Car> getCarsByOwnerName(String ownerName) {
+        return carRepository.findByOwnerName(ownerName);
+    }
+
+    // Поиск машин по имени владельца (Native Query)
+    public List<Car> getCarsByOwnerNameNative(String ownerName) {
+        return carRepository.findByOwnerNameNative(ownerName);
+    }
+
 }
 
 

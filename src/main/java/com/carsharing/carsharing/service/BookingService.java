@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.service;
 
+import com.carsharing.carsharing.cache.BookingCache;
 import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.model.Car;
@@ -10,20 +11,24 @@ import com.carsharing.carsharing.repository.CarRepository;
 import com.carsharing.carsharing.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class BookingService {
 
     private final BookingRepository bookingRepository;
     private final UserRepository userRepository;
     private final CarRepository carRepository;
+    private final BookingCache bookingCache;
 
     public BookingService(BookingRepository bookingRepository, UserRepository userRepository,
-                          CarRepository carRepository) {
+                          CarRepository carRepository, BookingCache bookingCache) {
         this.bookingRepository = bookingRepository;
         this.userRepository = userRepository;
         this.carRepository = carRepository;
+        this.bookingCache = bookingCache;
     }
 
     @Transactional
@@ -34,8 +39,11 @@ public class BookingService {
 
     // Получение бронирования по ID
     public Booking getBookingById(Long id) {
-        return bookingRepository.findById(id)
-                .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+        //return bookingRepository.findById(id)
+        //.orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+
+        return bookingCache.getOrFetch(id, key -> bookingRepository.findById(key)
+                .orElseThrow(() -> new NotFound("Booking not found with ID: " + key)));
     }
 
     @Transactional
@@ -53,14 +61,18 @@ public class BookingService {
         booking.setRenter(renter);
         booking.setCars(cars); // Используем setCars, а не setCar
 
-        return bookingRepository.save(booking);
+        Booking savedBooking = bookingRepository.save(booking);
+        bookingCache.put(savedBooking.getId(), savedBooking); // Добавляем в кэш
+        return savedBooking;
     }
 
     public Booking updateBooking(Long id, Long renterId, List<Long> carIds,
                                  Booking bookingDetails) {
-        // Находим бронирование по ID
-        Booking booking = bookingRepository.findById(id)
-                .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+        Booking booking = bookingCache.get(id);
+        if (booking == null) {
+            booking = bookingRepository.findById(id)
+                    .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+        }
 
         // Если передан новый арендатор, обновляем только его, если не null
         if (renterId != null) {
@@ -95,14 +107,18 @@ public class BookingService {
         }
 
         // Сохраняем обновленное бронирование
-        return bookingRepository.save(booking);
+        Booking updatedBooking = bookingRepository.save(booking);
+        bookingCache.put(updatedBooking.getId(), updatedBooking); // Обновляем в кэше
+        return updatedBooking;
+
     }
 
     @Transactional
     public void deleteBooking(Long id) {
-        // Находим бронь
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+
+
 
         // Удаляем связи с машинами
         for (Car car : booking.getCars()) {
@@ -117,5 +133,6 @@ public class BookingService {
 
         // Удаляем бронь
         bookingRepository.delete(booking);
+        bookingCache.remove(id);
     }
 }
