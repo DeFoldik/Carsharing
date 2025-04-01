@@ -1,0 +1,211 @@
+2025-04-01 01:58:58.435 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failedjava.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@77fd995d - No evaluator set for filter null
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@77fd995d - No evaluator set for filter null
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	Suppressed: java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+
+2025-04-01 02:03:55.681 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failedjava.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@28207024 - No evaluator set for filter null
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@28207024 - No evaluator set for filter null
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	Suppressed: java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+
+2025-04-01 02:05:28.229 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failedjava.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@101f523 - No evaluator set for filter null
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@101f523 - No evaluator set for filter null
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	Suppressed: java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+
+2025-04-01 02:12:04.818 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failedjava.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@101f523 - No evaluator set for filter null
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.ImplicitModelHandler - Could not create component [evaluator] of type [ch.qos.logback.classic.boolex.JaninoEventEvaluator] java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+ERROR in ch.qos.logback.core.filter.EvaluatorFilter@101f523 - No evaluator set for filter null
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	Suppressed: java.lang.ClassNotFoundException: ch.qos.logback.classic.boolex.JaninoEventEvaluator
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+
+2025-04-01 02:14:09.361 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 02:14:09.393 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 12256 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-04-01 02:14:09.394 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 02:14:09.437 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 02:14:09.437 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 02:14:10.239 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 02:14:10.279 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2025-04-01 02:14:10.779 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 02:14:10.788 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 02:14:10.789 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 02:14:10.789 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-01 02:14:10.823 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 02:14:10.823 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1386 ms
+2025-04-01 02:14:10.944 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 02:14:10.981 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-04-01 02:14:11.009 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 02:14:11.203 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 02:14:11.225 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 02:14:11.320 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4752372
+2025-04-01 02:14:11.321 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 02:14:11.350 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 02:14:11.351 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 02:14:11.363 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 02:14:12.072 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 02:14:12.133 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 02:14:12.401 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-01 02:14:13.030 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 02:14:13.481 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 02:14:13.498 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 02:14:13.510 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 02:14:13.516 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 4.508 seconds (process running for 5.105)
+2025-04-01 02:14:34.810 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 02:14:34.811 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 02:14:34.812 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-01 02:14:35.315 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 336 ms
+2025-04-01 02:17:24.614 [http-nio-8080-exec-2] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource cars.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:17:24.629 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource cars.]
+2025-04-01 02:17:24.685 [http-nio-8080-exec-9] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:17:24.689 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:17:35.256 [http-nio-8080-exec-7] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:17:35.257 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:18:00.890 [http-nio-8080-exec-6] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Item with key 5 not found in cache
+2025-04-01 02:18:00.890 [http-nio-8080-exec-6] INFO  c.c.carsharing.service.CarService - Car with ID 5 not found in cache, fetching from database
+2025-04-01 02:18:00.906 [http-nio-8080-exec-6] WARN  c.c.c.e.GlobalExceptionHandler - Resource not found: Car not found with ID: 5
+2025-04-01 02:18:00.907 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.carsharing.carsharing.exception.NotFound: Car not found with ID: 5]
+2025-04-01 02:18:00.950 [http-nio-8080-exec-1] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:18:00.952 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:18:42.146 [http-nio-8080-exec-4] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+
+2025-04-01 02:18:42.147 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-01 02:18:42.180 [http-nio-8080-exec-5] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:18:42.181 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:18:46.291 [http-nio-8080-exec-3] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+
+2025-04-01 02:18:46.292 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-01 02:18:46.313 [http-nio-8080-exec-8] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:18:46.314 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:19:11.558 [http-nio-8080-exec-2] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+
+2025-04-01 02:19:11.559 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-01 02:19:11.592 [http-nio-8080-exec-9] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:19:11.593 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:20:28.995 [http-nio-8080-exec-7] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource 8.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:20:28.996 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource 8.]
+2025-04-01 02:20:29.028 [http-nio-8080-exec-6] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:20:29.029 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:20:56.715 [http-nio-8080-exec-1] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+
+2025-04-01 02:20:56.715 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-01 02:20:56.750 [http-nio-8080-exec-4] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:20:56.751 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:22:12.802 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Item with key 2 not found in cache
+2025-04-01 02:22:12.802 [http-nio-8080-exec-3] INFO  c.c.carsharing.service.CarService - Car with ID 2 not found in cache, fetching from database
+2025-04-01 02:22:12.806 [http-nio-8080-exec-3] WARN  c.c.c.e.GlobalExceptionHandler - Resource not found: Car not found with ID: 2
+2025-04-01 02:22:12.807 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.carsharing.carsharing.exception.NotFound: Car not found with ID: 2]
+2025-04-01 02:22:12.854 [http-nio-8080-exec-8] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:22:12.858 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:25:35.927 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Item with key 4 not found in cache
+2025-04-01 02:25:35.927 [http-nio-8080-exec-7] INFO  c.c.carsharing.service.CarService - Car with ID 4 not found in cache, fetching from database
+2025-04-01 02:25:35.929 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LRUCache - Cache add: Added item with key 4 to cache 
+2025-04-01 02:25:40.892 [http-nio-8080-exec-6] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Item with key 5 not found in cache
+2025-04-01 02:25:40.892 [http-nio-8080-exec-6] INFO  c.c.carsharing.service.CarService - Car with ID 5 not found in cache, fetching from database
+2025-04-01 02:25:40.894 [http-nio-8080-exec-6] WARN  c.c.c.e.GlobalExceptionHandler - Resource not found: Car not found with ID: 5
+2025-04-01 02:25:40.895 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.carsharing.carsharing.exception.NotFound: Car not found with ID: 5]
+2025-04-01 02:27:28.627 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Item with key 6 not found in cache
+2025-04-01 02:27:28.627 [http-nio-8080-exec-5] INFO  c.c.carsharing.service.CarService - Car with ID 6 not found in cache, fetching from database
+2025-04-01 02:27:28.636 [http-nio-8080-exec-5] WARN  c.c.c.e.GlobalExceptionHandler - Resource not found: Car not found with ID: 6
+2025-04-01 02:27:28.636 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.carsharing.carsharing.exception.NotFound: Car not found with ID: 6]
+2025-04-01 02:27:34.663 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Item with key 10 not found in cache
+2025-04-01 02:27:34.663 [http-nio-8080-exec-3] INFO  c.c.carsharing.service.CarService - Car with ID 10 not found in cache, fetching from database
+2025-04-01 02:27:34.665 [http-nio-8080-exec-3] WARN  c.c.c.e.GlobalExceptionHandler - Resource not found: Car not found with ID: 10
+2025-04-01 02:27:34.666 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.carsharing.carsharing.exception.NotFound: Car not found with ID: 10]
+2025-04-01 02:27:50.943 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Item with key 11 not found in cache
+2025-04-01 02:27:50.943 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LRUCache - Cache miss: Fetching item with key 11 from database
+2025-04-01 02:27:50.946 [http-nio-8080-exec-2] WARN  c.c.c.e.GlobalExceptionHandler - Resource not found: Booking not found with ID: 11
+2025-04-01 02:27:50.947 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.carsharing.carsharing.exception.NotFound: Booking not found with ID: 11]
+2025-04-01 02:30:16.847 [http-nio-8080-exec-10] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+
+2025-04-01 02:30:16.848 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-01 02:30:16.876 [http-nio-8080-exec-7] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:30:16.877 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:30:24.871 [http-nio-8080-exec-6] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+
+2025-04-01 02:30:24.872 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-01 02:30:24.902 [http-nio-8080-exec-1] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:30:24.902 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:30:43.635 [http-nio-8080-exec-5] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+
+2025-04-01 02:30:43.636 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-01 02:34:01.626 [http-nio-8080-exec-8] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource %D1%81%D1%84%D0%BA%D1%8B.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:34:01.627 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource %D1%81%D1%84%D0%BA%D1%8B.]
+2025-04-01 02:34:01.657 [http-nio-8080-exec-2] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:34:01.658 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:34:07.143 [http-nio-8080-exec-9] WARN  c.c.c.e.GlobalExceptionHandler - Resource not found: No cars found for brand: Toyota
+2025-04-01 02:34:07.144 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.carsharing.carsharing.exception.NotFound: No cars found for brand: Toyota]
+2025-04-01 02:34:07.173 [http-nio-8080-exec-10] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:34:07.175 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-04-01 02:34:11.334 [http-nio-8080-exec-6] ERROR c.c.c.e.GlobalExceptionHandler - Unexpected error: org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+
+2025-04-01 02:34:11.335 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
