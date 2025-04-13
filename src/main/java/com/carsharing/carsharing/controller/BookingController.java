@@ -4,6 +4,7 @@ import com.carsharing.carsharing.model.Booking;
 import com.carsharing.carsharing.service.BookingService;
 import jakarta.validation.Valid;
 import java.util.List;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -52,4 +53,13 @@ public class BookingController {
     public void deleteBooking(@PathVariable Long id) {
         bookingService.deleteBooking(id);
     }
+
+    /*@PostMapping("/bulk")
+    public ResponseEntity<List<Booking>> addBookingsBulk(
+            @RequestParam Long renterId,
+            @Valid @RequestBody List<Booking> bookings
+    ) {
+        List<Booking> result = bookingService.createBookingsBulk(bookings, renterId);
+        return ResponseEntity.ok(result);
+    }*/
 }

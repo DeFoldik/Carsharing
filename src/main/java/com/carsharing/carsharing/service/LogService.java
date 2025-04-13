@@ -60,7 +60,11 @@ public class LogService {
         return String.format("application-%s.log", parsedDate.format(LOG_DATE_FORMATTER));
     }
 
-    private LocalDate parseDate(String date) {
+    LocalDate parseDate(String date) {
+        if (date == null || date.isBlank()) {
+            throw new InvalidRequest("Date cannot be null or empty");
+        }
+
         try {
             return LocalDate.parse(date, INPUT_DATE_FORMATTER);
         } catch (DateTimeParseException ex) {

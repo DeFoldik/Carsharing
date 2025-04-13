@@ -57,7 +57,7 @@ public class CarService {
         return carRepository.findByBrandIgnoreCase(brand);
     }
 
-    @Transactional
+    /*@Transactional
     public List<Car> createCars(List<Car> cars, Long ownerId) {
 
         User user = userRepository.findById(ownerId)
@@ -83,6 +83,27 @@ public class CarService {
         for (Car car : savedCars) {
             carCache.put(car.getId(), car);
         }
+
+        return savedCars;
+    }*/
+
+    @Transactional
+    public List<Car> createCars(List<Car> cars, Long ownerId) {
+
+        User user = userRepository.findById(ownerId)
+                .orElseThrow(() -> new NotFound("Owner not found with ID: " + ownerId));
+
+        if (!(user instanceof Owner owner)) {
+            throw new NotFound("User with ID " + ownerId + " is not an Owner");
+        }
+
+        List<Car> updatedCars = cars.stream()
+                .peek(car -> car.setOwner(owner))
+                .toList();
+
+        List<Car> savedCars = carRepository.saveAll(updatedCars);
+
+        savedCars.forEach(car -> carCache.put(car.getId(), car));
 
         return savedCars;
     }
