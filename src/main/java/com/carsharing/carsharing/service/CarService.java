@@ -10,7 +10,6 @@ import com.carsharing.carsharing.repository.BookingRepository;
 import com.carsharing.carsharing.repository.CarRepository;
 import com.carsharing.carsharing.repository.UserRepository;
 import java.util.List;
-import java.util.ArrayList;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -154,6 +153,7 @@ public class CarService {
     public List<Car> getCarsByModel(String model) {
         return carRepository.findByModel(model);
     }
+
     public List<Car> getCarsByOwnerName(String ownerName) {
         return carRepository.findByOwnerName(ownerName);
     }

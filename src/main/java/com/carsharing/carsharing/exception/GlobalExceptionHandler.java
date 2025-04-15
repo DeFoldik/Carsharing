@@ -4,15 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
-import java.util.List;
-import java.util.stream.Collectors;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -27,9 +25,9 @@ public class GlobalExceptionHandler {
 
     // 2. Обработка ошибок валидации
     @ExceptionHandler({
-            IllegalArgumentException.class,
-            MethodArgumentNotValidException.class,
-            HttpMessageNotReadableException.class
+        IllegalArgumentException.class,
+        MethodArgumentNotValidException.class,
+        HttpMessageNotReadableException.class
     })
     public ResponseEntity<ErrorResponse> handleValidationExceptions(Exception ex) {
         String message = ex instanceof MethodArgumentNotValidException
@@ -41,8 +39,8 @@ public class GlobalExceptionHandler {
 
     // 3. Обработка Spring MVC исключений
     @ExceptionHandler({
-            HttpRequestMethodNotSupportedException.class,
-            HttpMediaTypeNotSupportedException.class
+        HttpRequestMethodNotSupportedException.class,
+        HttpMediaTypeNotSupportedException.class
     })
     public ResponseEntity<ErrorResponse> handleHttpExceptions(Exception ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)

@@ -75,7 +75,8 @@ public class Booking {
             }
 
             if (startDate.isAfter(LocalDate.now().plusYears(1))) {
-                throw new IllegalArgumentException("Дата начала не может быть более чем на год вперед");
+                throw new IllegalArgumentException("Дата начала не"
+                        + " может быть более чем на год вперед");
             }
 
         } catch (DateTimeParseException e) {

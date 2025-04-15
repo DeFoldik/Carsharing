@@ -48,7 +48,8 @@ public class CarController {
 
     // Получение машины по ID
     @GetMapping("/{id}")
-    @Operation(summary = "Получить автомобиль по ID", description = "Возвращает автомобиль по идентификатору")
+    @Operation(summary = "Получить автомобиль по ID",
+            description = "Возвращает автомобиль по идентификатору")
     public Car getCarById(@PathVariable Long id) {
         return carService.getCarById(id);
     }
@@ -62,33 +63,38 @@ public class CarController {
 
     // Обновление машины по ID
     @PutMapping("/{id}")
-    @Operation(summary = "Обновить автомобиль по ID", description = "Обновляет автомобиль по идентификатору")
+    @Operation(summary = "Обновить автомобиль по ID",
+            description = "Обновляет автомобиль по идентификатору")
     public Car updateCar(@PathVariable Long id, @RequestBody @Valid Car carDetails) {
         return carService.updateCar(id, carDetails);
     }
 
     // Удаление машины по ID
     @DeleteMapping("/{id}")
-    @Operation(summary = "Удалить автомобиль по ID", description = "Удаляет автомобиль по идентификатору")
+    @Operation(summary = "Удалить автомобиль по ID",
+            description = "Удаляет автомобиль по идентификатору")
     public void deleteCar(@PathVariable Long id) {
         carService.deleteCar(id);
     }
 
     // Получение машин по модели (JPQL)
     @GetMapping("/by-model")
-    @Operation(summary = "Получить автомобили по модели", description = "Возвращает автомобили по идентификатору")
+    @Operation(summary = "Получить автомобили по модели",
+            description = "Возвращает автомобили по идентификатору")
     public List<Car> getCarsByModel(@RequestParam String model) {
         return carService.getCarsByModel(model);
     }
 
     @GetMapping("/by-owner")
-    @Operation(summary = "Получить автомобили по владельцу", description = "Возвращает автомобили по владелицу")
+    @Operation(summary = "Получить автомобили по владельцу",
+            description = "Возвращает автомобили по владелицу")
     public List<Car> getCarsByOwnerName(@RequestParam String ownerName) {
         return carService.getCarsByOwnerName(ownerName);
     }
 
     @GetMapping("/by-owner-native")
-    @Operation(summary = "Получить автомобили по владельцу", description = "Возвращает автомобили по владелицу")
+    @Operation(summary = "Получить автомобили по владельцу",
+            description = "Возвращает автомобили по владелицу")
     public List<Car> getCarsByOwnerNameNative(@RequestParam String ownerName) {
         return carService.getCarsByOwnerNameNative(ownerName);
     }

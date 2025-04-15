@@ -18,14 +18,14 @@ public interface CarRepository extends JpaRepository<Car, Long> {
             + "WHERE c.model = :model")
     List<Car> findByModel(@Param("model") String model);
 
-    @Query("SELECT DISTINCT c FROM Car c " +
-            "LEFT JOIN FETCH c.owner o " +
-            "WHERE o.name = :ownerName")
+    @Query("SELECT DISTINCT c FROM Car c "
+            + "LEFT JOIN FETCH c.owner o "
+            + "WHERE o.name = :ownerName")
     List<Car> findByOwnerName(@Param("ownerName") String ownerName);
 
-    @Query(value = "SELECT c.* FROM car c " +
-            "LEFT JOIN user o ON c.owner_id = o.id " +
-            "WHERE o.name = :ownerName", nativeQuery = true)
+    @Query(value = "SELECT c.* FROM car c "
+            + "LEFT JOIN user o ON c.owner_id = o.id "
+            + "WHERE o.name = :ownerName", nativeQuery = true)
     List<Car> findByOwnerNameNative(@Param("ownerName") String ownerName);
 
 }

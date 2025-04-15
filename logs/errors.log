@@ -2,3 +2,4 @@
 2025-04-11 02:31:10.388 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.deleteBooking(..), Message: Booking not found with ID: 33
 2025-04-11 02:43:07.916 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.deleteCar(..), Message: Car not found with ID: 12
 2025-04-11 02:43:43.461 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.deleteCar(..), Message: Car not found with ID: 12
+2025-04-15 10:54:42.234 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.createCars(..), Message: Owner not found with ID: 8
