@@ -26,11 +26,13 @@ public class LoggingAspect {
 
     @AfterReturning(pointcut = "controllerMethods()", returning = "result")
     public void logAfter(JoinPoint joinPoint, Object result) {
-        logger.info("Method executed: {}, Returned: {}", joinPoint.getSignature().toShortString(), result);
+        logger.info("Method executed: {}, Returned: {}",
+                joinPoint.getSignature().toShortString(), result);
     }
 
     @AfterThrowing(pointcut = "controllerMethods()", throwing = "exception")
     public void logException(JoinPoint joinPoint, Exception exception) {
-        logger.error("Exception in method: {}, Message: {}", joinPoint.getSignature().toShortString(), exception.getMessage());
+        logger.error("Exception in method: {}, Message: {}",
+                joinPoint.getSignature().toShortString(), exception.getMessage());
     }
 }

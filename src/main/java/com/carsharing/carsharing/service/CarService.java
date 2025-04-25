@@ -56,36 +56,6 @@ public class CarService {
         return carRepository.findByBrandIgnoreCase(brand);
     }
 
-    /*@Transactional
-    public List<Car> createCars(List<Car> cars, Long ownerId) {
-
-        User user = userRepository.findById(ownerId)
-                .orElseThrow(() -> new NotFound("Owner not found with ID: " + ownerId));
-
-        // Проверяем, что пользователь является владельцем
-        if (!(user instanceof Owner)) {
-            throw new NotFound("User with ID " + ownerId + " is not an Owner");
-        }
-
-        // Приводим User к Owner
-        Owner owner = (Owner) user;
-
-        // Привязываем владельца ко всем машинам
-        for (Car car : cars) {
-            car.setOwner(owner);
-        }
-
-        // Сохраняем все машины
-        List<Car> savedCars = carRepository.saveAll(cars);
-
-        // Добавляем сохраненные машины в кэш
-        for (Car car : savedCars) {
-            carCache.put(car.getId(), car);
-        }
-
-        return savedCars;
-    }*/
-
     @Transactional
     public List<Car> createCars(List<Car> cars, Long ownerId) {
 

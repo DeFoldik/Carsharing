@@ -6,7 +6,7 @@ import java.util.function.Function;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class LRUCache<K, V> {
+public class LruCache<K, V> {
 
     private final int maxCapacity;
     private final Map<K, CacheEntry<V>> cache;
@@ -24,7 +24,7 @@ public class LRUCache<K, V> {
         }
     }
 
-    public LRUCache(int maxCapacity) {
+    public LruCache(int maxCapacity) {
         this.maxCapacity = maxCapacity;
         this.cache = new LinkedHashMap<K, CacheEntry<V>>(maxCapacity, 0.75f, true) {
             @Override
@@ -33,7 +33,8 @@ public class LRUCache<K, V> {
                 boolean shouldRemove = size() > maxCapacity;
                 if (shouldRemove) {
                     log.info(
-                            "Cache eviction: Removed least recently used item with key {} (frequency: {}))",
+                            "Cache eviction: Removed least recently used item "
+                                    + "with key {} (frequency: {}))",
                             eldest.getKey(),
                             eldest.getValue().frequency
                     );

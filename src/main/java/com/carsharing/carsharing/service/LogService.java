@@ -1,12 +1,8 @@
 package com.carsharing.carsharing.service;
 
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Service;
 import com.carsharing.carsharing.exception.InvalidRequest;
-import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.exception.LoggingException;
-
+import com.carsharing.carsharing.exception.NotFound;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -18,13 +14,21 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Service;
+
+
+
 
 @Service
 public class LogService {
 
     private static final String LOGS_DIR = "logs";
-    private static final DateTimeFormatter INPUT_DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-    private static final DateTimeFormatter LOG_DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private static final DateTimeFormatter INPUT_DATE_FORMATTER =
+            DateTimeFormatter.ofPattern("dd.MM.yyyy");
+    private static final DateTimeFormatter LOG_DATE_FORMATTER =
+            DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     public Resource getLogFileForDate(String date) {
         LocalDate parsedDate = parseDate(date);
