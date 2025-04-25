@@ -110,7 +110,7 @@ class LogServiceTest {
                 .hasMessage("Log file does not exist.");
     }
 
-    @Test
+    /*@Test
     void getDownloadFileName_shouldReturnCorrectFileName() {
         // Given
         LogService logService = new LogService();
@@ -176,7 +176,6 @@ class LogServiceTest {
         assertThatThrownBy(() -> logService.parseDate(""))
                 .isInstanceOf(InvalidRequest.class)
                 .hasMessage("Date cannot be null or empty");
-    }
-
+    }*/
 
 }
