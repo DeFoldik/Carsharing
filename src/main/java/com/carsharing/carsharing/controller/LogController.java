@@ -53,10 +53,22 @@ public class LogController {
 
     @GetMapping("/downloadAsync")
     @Operation(summary = "Скачать лог-файл по taskId (если готов)")
-    public ResponseEntity<Resource> downloadLogFileAsync(@RequestParam String taskId) {
+    public ResponseEntity<?> downloadLogFileAsync(@RequestParam String taskId) {
+        Map<String, Object> status = logService.getTaskStatus(taskId);
+        String currentStatus = status.get("status").toString();
+
+        if (!"COMPLETED".equals(currentStatus)) {
+            return ResponseEntity
+                    .status(202)
+                    .body(Map.of(
+                            "message", "Log file is not ready yet. Status: " + currentStatus,
+                            "taskId", taskId,
+                            "status", currentStatus
+                    ));
+        }
+
         Resource resource = logService.getLogFileByTaskId(taskId);
-        String fileName = logService.getDownloadFileName(
-                logService.getTaskStatus(taskId).get("date").toString());
+        String fileName = logService.getDownloadFileName(status.get("date").toString());
 
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_OCTET_STREAM)

@@ -1,6 +1,7 @@
 package com.carsharing.carsharing.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -28,7 +29,8 @@ public class Car {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_id")
-    @JsonBackReference
+    //@JsonBackReference
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "cars"})
     private Owner owner;
 
     @ManyToMany(fetch = FetchType.LAZY)

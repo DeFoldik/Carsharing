@@ -16,13 +16,35 @@ public class LogTask {
         this.date = date;
     }
 
-    public String getTaskId() { return taskId; }
-    public String getDate() { return date; }
-    public TaskStatus getStatus() { return status; }
-    public Resource getResource() { return resource; }
-    public String getErrorMessage() { return errorMessage; }
+    public String getTaskId() {
+        return taskId;
+    }
 
-    public void setStatus(TaskStatus status) { this.status = status; }
-    public void setResource(Resource resource) { this.resource = resource; }
-    public void setErrorMessage(String errorMessage) { this.errorMessage = errorMessage; }
+    public String getDate() {
+        return date;
+    }
+
+    public TaskStatus getStatus() {
+        return status;
+    }
+
+    public Resource getResource() {
+        return resource;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setStatus(TaskStatus status) {
+        this.status = status;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
 }

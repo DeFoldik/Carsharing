@@ -18,7 +18,10 @@ public class VisitAspect {
         this.visitService = visitService;
     }
 
-    @Before("execution(* com.carsharing.carsharing.controller..*(..))")
+    @Before("execution(* com.carsharing.carsharing.controller..*(..)) &&"
+            + "!execution(* com.carsharing.carsharing.controller.LogController.*(..)) && "
+            + "!execution(* com.carsharing.carsharing.controller.VisitController.*(..))"
+    )
     public void registerVisit() {
         HttpServletRequest request = ((ServletRequestAttributes)
                 RequestContextHolder.currentRequestAttributes()).getRequest();

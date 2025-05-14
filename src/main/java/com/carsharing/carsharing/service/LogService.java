@@ -6,27 +6,38 @@ import com.carsharing.carsharing.exception.NotFound;
 import com.carsharing.carsharing.model.LogTask;
 import com.carsharing.carsharing.model.TaskStatus;
 import jakarta.annotation.PostConstruct;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.*;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.*;
-import java.util.concurrent.*;
+
 
 @Slf4j
 @Service
 public class LogService {
 
     private static final String LOGS_DIR = "logs";
-    private static final DateTimeFormatter INPUT_DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-    private static final DateTimeFormatter LOG_DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private static final DateTimeFormatter INPUT_DATE_FORMATTER =
+            DateTimeFormatter.ofPattern("dd.MM.yyyy");
+    private static final DateTimeFormatter LOG_DATE_FORMATTER =
+            DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     private ExecutorService executor;
     private final ConcurrentHashMap<String, LogTask> taskMap = new ConcurrentHashMap<>();
@@ -89,7 +100,7 @@ public class LogService {
 
         executor.submit(() -> {
             try {
-                //Thread.sleep(50000);
+                Thread.sleep(30000);
                 Resource resource = getLogFileForDate(date);
                 task.setResource(resource);
                 task.setStatus(TaskStatus.COMPLETED);
@@ -129,7 +140,8 @@ public class LogService {
         }
 
         if (task.getStatus() != TaskStatus.COMPLETED) {
-            throw new LoggingException("Log file is not ready. Current status: " + task.getStatus());
+            throw new LoggingException("Log file is not ready. Current status: "
+                    + task.getStatus());
         }
 
         return task.getResource();

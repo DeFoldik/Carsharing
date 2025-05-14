@@ -54,12 +54,5 @@ public class BookingController {
         bookingService.deleteBooking(id);
     }
 
-    /*@PostMapping("/bulk")
-    public ResponseEntity<List<Booking>> addBookingsBulk(
-            @RequestParam Long renterId,
-            @Valid @RequestBody List<Booking> bookings
-    ) {
-        List<Booking> result = bookingService.createBookingsBulk(bookings, renterId);
-        return ResponseEntity.ok(result);
-    }*/
+
 }

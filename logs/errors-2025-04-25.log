@@ -1,0 +1,15 @@
+2025-04-11 02:30:47.182 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.deleteBooking(..), Message: Booking not found with ID: 27
+2025-04-11 02:31:10.388 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.deleteBooking(..), Message: Booking not found with ID: 33
+2025-04-11 02:43:07.916 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.deleteCar(..), Message: Car not found with ID: 12
+2025-04-11 02:43:43.461 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.deleteCar(..), Message: Car not found with ID: 12
+2025-04-15 10:54:42.234 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.createCars(..), Message: Owner not found with ID: 8
+2025-04-25 10:48:13.630 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.getTaskStatus(..), Message: null
+2025-04-25 10:48:29.325 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.downloadAsync(..), Message: null
+2025-04-25 10:50:05.024 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.getTaskStatus(..), Message: null
+2025-04-25 10:50:14.563 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.downloadLogFileAsync(..), Message: null
+2025-04-25 11:02:26.794 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.downloadLogFileAsync(..), Message: Task not found with ID: f8227c81-4ea5-415c-b144-e610662716b5
+2025-04-25 11:03:23.577 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.getTaskStatus(..), Message: Task not found with ID: ce69fdd9-729d-4023-8ee1-ebc441003bd1
+2025-04-25 14:43:31.602 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.downloadLogFileAsync(..), Message: Log file is not ready. Current status: IN_PROGRESS
+2025-04-25 14:43:57.177 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.downloadLogFileAsync(..), Message: Task not found with ID: 
+2025-04-25 15:05:09.200 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.downloadLogFileAsync(..), Message: Log file is not ready. Current status: IN_PROGRESS
+2025-04-25 15:05:17.984 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: LogController.getTaskStatus(..), Message: Task not found with ID: 
