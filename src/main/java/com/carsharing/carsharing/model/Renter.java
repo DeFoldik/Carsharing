@@ -8,7 +8,7 @@ import jakarta.persistence.Entity;
 public class Renter extends User {
     public Renter() {}
 
-    public Renter(String name) {
-        super(name);
+    public Renter(String username, String passwordHash, String name) {
+        super(username, passwordHash, name);
     }
 }

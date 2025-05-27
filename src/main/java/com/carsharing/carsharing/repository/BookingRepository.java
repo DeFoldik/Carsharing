@@ -27,4 +27,6 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
             @Param("startDate") LocalDate startDate,
             @Param("endDate") LocalDate endDate,
             @Param("excludeBookingId") Long excludeBookingId);
+
+    //List<Booking> findByOwnerUsername(String username);
 }

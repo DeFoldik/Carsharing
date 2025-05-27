@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.Column;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -21,9 +22,20 @@ public abstract class User {
     @NotBlank(message = "Name is required")
     private String name;
 
+
+    @NotBlank(message = "Username is required")
+    @Column(unique = true)
+    private String username;
+
+    @NotBlank(message = "Password is required")
+    private String passwordHash;
+
+
     protected User() {}
 
-    protected User(String name) {
+    protected User(String username, String passwordHash, String name) {
+        this.username = username;
+        this.passwordHash = passwordHash;
         this.name = name;
     }
 
@@ -38,6 +50,19 @@ public abstract class User {
     public String getName() {
         return name;
     }
+
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {this.username = username;}
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {this.passwordHash = passwordHash;}
 
     public void setName(String name) {
         this.name = name;

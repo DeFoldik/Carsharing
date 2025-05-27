@@ -26,4 +26,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     // Получить владельца по ID
     @Query("SELECT u FROM User u WHERE TYPE(u) = Owner AND u.id = :id")
     Optional<Owner> findOwnerById(@Param("id") Long id);
+
+    Optional<User> findByUsername(String username);
+
 }

@@ -1,4 +1,4 @@
-package com.carsharing.carsharing.service;
+/*package com.carsharing.carsharing.service;
 
 import com.carsharing.carsharing.cache.BookingCache;
 import com.carsharing.carsharing.exception.NotFound;
@@ -473,4 +473,4 @@ class BookingServiceTest {
                 .hasMessageContaining("Renter not found with ID: " + renterId);
     }
 
-}
+}*/

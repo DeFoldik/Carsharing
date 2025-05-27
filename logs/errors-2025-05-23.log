@@ -1,0 +1,69 @@
+2025-05-23 00:02:21.158 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Audi
+2025-05-23 00:27:16.724 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 00:41:09.124 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-23 00:45:12.753 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-23 00:51:19.688 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-23 00:51:22.893 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-23 00:59:34.331 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Ь6
+2025-05-23 01:12:33.248 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин бренда 'BMW' с моделью 'G7'
+2025-05-23 01:23:33.708 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин с брендом: D
+2025-05-23 01:27:37.954 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин бренда 'f' с моделью 'vlv'
+2025-05-23 01:30:44.582 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин бренда 'k' с моделью 'k'
+2025-05-23 01:40:04.666 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин с брендом: kd
+2025-05-23 01:43:54.945 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин бренда 'Koh' с моделью '7'
+2025-05-23 04:11:04.749 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин с брендом: Q7
+2025-05-23 04:11:43.168 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:11:44.380 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:11:44.967 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:11:45.185 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:13:12.762 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:13:15.480 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:13:21.999 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:21:43.803 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:21:44.886 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:21:56.881 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:23:27.441 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 04:40:55.189 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 05:50:23.953 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 05:55:44.603 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:16:13.109 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:18:21.133 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:18:21.938 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:18:22.163 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:27:56.403 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:27:57.334 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:27:57.508 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:27:57.746 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:27:57.974 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:05.975 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:06.526 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:06.789 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:07.002 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:07.228 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:18.058 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:27.826 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:28.789 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:29.710 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:35.028 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:44.175 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:44.922 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:28:57.173 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:29:06.914 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:29:16.002 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 06:37:57.790 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:38:15.058 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 06:38:38.489 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: Нет машин бренда 'Audi' с моделью 'd6'
+2025-05-23 07:46:20.217 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 07:50:18.897 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.updateProfile(..), Message: Неверный текущий пароль
+2025-05-23 07:50:28.685 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.updateProfile(..), Message: Неверный текущий пароль
+2025-05-23 07:50:39.265 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.updateProfile(..), Message: Неверный текущий пароль
+2025-05-23 09:18:41.271 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 09:22:52.857 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-23 10:01:40.794 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 10:01:41.863 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 10:01:42.794 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 10:01:43.437 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 10:01:44.427 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 10:01:52.254 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 10:01:56.059 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.getCurrentUser(..), Message: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2025-05-23 10:02:11.810 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя

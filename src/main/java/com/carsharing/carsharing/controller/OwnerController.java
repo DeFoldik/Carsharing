@@ -46,4 +46,5 @@ public class OwnerController {
     public Owner updateOwner(@PathVariable Long id, @Valid @RequestBody Owner ownerDetails) {
         return ownerService.updateOwner(id, ownerDetails);
     }
+
 }

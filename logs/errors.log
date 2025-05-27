@@ -1,50 +1,38 @@
-2025-05-13 04:14:30.952 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2
-2025-05-13 04:47:39.453 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
-2025-05-13 04:47:40.904 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
-2025-05-13 04:47:41.656 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
-2025-05-13 04:47:42.144 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
-2025-05-13 04:47:42.370 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
-2025-05-13 04:48:14.121 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:08:06.822 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: la
-2025-05-13 05:08:08.367 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: la
-2025-05-13 05:08:10.440 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: la
-2025-05-13 05:37:52.685 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:37:53.785 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:52:42.853 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:52:43.975 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:53:04.404 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:53:14.047 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:53:37.184 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMW M5
-2025-05-13 05:53:38.193 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMW M5
-2025-05-13 05:53:47.582 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
-2025-05-13 05:53:48.481 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
-2025-05-13 05:53:48.710 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
-2025-05-13 05:53:50.052 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
-2025-05-13 05:53:51.733 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 05:55:15.180 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Q5
-2025-05-13 05:55:16.408 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Q5
-2025-05-13 05:55:18.493 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:08:46.309 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:10:15.095 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
-2025-05-13 06:10:16.180 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
-2025-05-13 06:10:16.899 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
-2025-05-13 06:10:17.095 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
-2025-05-13 06:10:25.900 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:16:36.508 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:21:06.233 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:32:27.346 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:35:43.187 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:36:08.190 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:37:31.188 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:52:47.368 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: jkg
-2025-05-13 06:53:29.853 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:53:30.912 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:53:31.760 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:53:34.308 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:53:47.548 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
-2025-05-13 06:55:37.295 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ЦЦ
-2025-05-13 09:12:44.596 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2
-2025-05-13 09:12:51.572 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Toyota
-2025-05-13 09:25:10.500 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2
-2025-05-13 11:18:42.204 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: K
-2025-05-13 18:04:43.348 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2
+2025-05-27 00:02:23.975 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 00:27:32.153 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 4 уже забронирована на указанные даты
+2025-05-27 01:40:10.313 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:40:12.530 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:40:35.854 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:41:29.882 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:41:31.443 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:42:05.112 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:47:50.690 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:48:03.607 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:52:12.458 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:57:34.525 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 01:57:40.098 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:13:40.366 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:22:56.832 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:24:46.129 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:29:01.408 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:29:02.560 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:29:37.947 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:30:09.417 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Cannot invoke "java.time.LocalDate.isAfter(java.time.chrono.ChronoLocalDate)" because "startDate" is null
+2025-05-27 02:36:47.738 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Машина с ID 4 уже забронирована на указанные даты
+2025-05-27 02:44:03.951 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 02:48:25.450 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 3 уже забронирована на указанные даты
+2025-05-27 02:49:33.330 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 02:57:24.815 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 5 уже забронирована на указанные даты
+2025-05-27 03:05:10.067 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 4 уже забронирована на указанные даты
+2025-05-27 03:13:00.919 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: User not found
+2025-05-27 03:17:08.464 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: User not found
+2025-05-27 03:17:33.586 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:18:07.653 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:22:54.269 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:23:06.064 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:23:07.630 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:26:19.950 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:33:50.396 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:33:58.261 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты
+2025-05-27 03:34:19.762 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.createBooking(..), Message: Дата начала не может быть более чем на год вперед
+2025-05-27 03:47:26.174 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: BookingController.updateBooking(..), Message: Машина с ID 2 уже забронирована на указанные даты

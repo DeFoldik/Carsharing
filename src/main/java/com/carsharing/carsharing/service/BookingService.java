@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.access.AccessDeniedException;
 
 @Slf4j
 @Service
@@ -36,7 +38,12 @@ public class BookingService {
     @Transactional
     // Получение всех бронирований
     public List<Booking> getAllBookings() {
-        return bookingRepository.findAll();
+
+        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
+
+        return bookingRepository.findAll().stream()
+                .filter(booking -> booking.getRenter().getUsername().equals(currentUsername))
+                .collect(Collectors.toList());
     }
 
     // Получение бронирования по ID
@@ -44,8 +51,15 @@ public class BookingService {
         //return bookingRepository.findById(id)
         //.orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
 
-        return bookingCache.getOrFetch(id, key -> bookingRepository.findById(key)
+        Booking booking = bookingCache.getOrFetch(id, key -> bookingRepository.findById(key)
                 .orElseThrow(() -> new NotFound("Booking not found with ID: " + key)));
+
+        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
+        if (!booking.getRenter().getUsername().equals(currentUsername)) {
+            throw new AccessDeniedException("Вы можете просматривать только свои бронирования");
+        }
+
+        return booking;
     }
 
     @Transactional
@@ -76,63 +90,110 @@ public class BookingService {
         return finalBooking;
     }
 
+    /*@Transactional
+    public Booking createBooking(String renterUsername, List<Long> carIds, Booking booking) {
+        // 1. Найти арендатора по username
+        User user = userRepository.findByUsername(renterUsername)
+                .orElseThrow(() -> new NotFound("User not found: " + renterUsername));
+
+        if (!(user instanceof Renter renter)) {
+            throw new IllegalArgumentException("User is not a renter");
+        }
+
+        // 2. Проверка автомобилей
+        List<Car> cars = carRepository.findAllById(carIds);
+        if (cars.isEmpty() || cars.size() != carIds.size()) {
+            throw new NotFound("One or more cars not found with provided IDs");
+        }
+
+        // 3. Сохраняем бронь для получения ID
+        Booking savedBooking = bookingRepository.save(booking);
+
+        // 4. Проверка доступности
+        checkCarAvailability(carIds, savedBooking.getStartDate(), savedBooking.getEndDate());
+
+        // 5. Связываем сущности
+        savedBooking.setRenter(renter);
+        savedBooking.setCars(cars);
+
+        // 6. Сохраняем
+        Booking finalBooking = bookingRepository.save(savedBooking);
+        bookingCache.put(finalBooking.getId(), finalBooking);
+        return finalBooking;
+    }*/
     @Transactional
-    public Booking updateBooking(Long id, Long renterId, List<Long> carIds,
-                                 Booking bookingDetails) {
-        // Получаем существующее бронирование
-        Booking booking = bookingCache.get(id);
-        if (booking == null) {
-            booking = bookingRepository.findById(id)
-                    .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+    public Booking updateBooking(Long id, Long renterId, List<Long> carIds, Booking bookingDetails) {
+        log.info("Update booking requested for ID: {}", id);
+        // 1. Получаем существующее бронирование
+        Booking existingBooking = bookingRepository.findById(id)
+                .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
+
+        // 2. Проверка прав доступа
+        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
+        if (!existingBooking.getRenter().getUsername().equals(currentUsername)) {
+            throw new AccessDeniedException("You can only modify your own bookings");
         }
 
-        // Обновление арендатора (если передан)
+        // 3. Обновление арендатора (если передан)
         if (renterId != null) {
-            User user = userRepository.findById(renterId)
-                    .orElseThrow(() -> new NotFound("User not found with ID: " + renterId));
-
-            if (!(user instanceof Renter)) {
-                throw new NotFound("User with ID " + renterId + " is not a Renter");
-            }
-            booking.setRenter((Renter) user);
+            Renter renter = (Renter) userRepository.findById(renterId)
+                    .orElseThrow(() -> new NotFound("Renter not found with ID: " + renterId));
+            existingBooking.setRenter(renter);
         }
 
-        // Подготовка списка машин для проверки доступности
+        // 4. Подготовка списка автомобилей для проверки
         List<Long> carsToCheck = carIds != null ? carIds :
-                booking.getCars().stream()
+                existingBooking.getCars().stream()
                         .map(Car::getId)
                         .collect(Collectors.toList());
 
-        // Обновление автомобилей (если переданы)
+        // 5. Обновление автомобилей (если переданы)
         if (carIds != null && !carIds.isEmpty()) {
             List<Car> cars = carRepository.findAllById(carIds);
-            if (cars.isEmpty()) {
-                throw new NotFound("Cars not found with the provided IDs");
+            if (cars.size() != carIds.size()) {
+                throw new NotFound("One or more cars not found with provided IDs");
             }
-            booking.setCars(cars);
+            existingBooking.setCars(cars);
         }
 
-        // Проверка и обновление дат
-        LocalDate newStartDate = bookingDetails.getStartDate() != null
-                ? bookingDetails.getStartDate() : booking.getStartDate();
-        LocalDate newEndDate = bookingDetails.getEndDate() != null
-                ? bookingDetails.getEndDate() : booking.getEndDate();
+        // 6. Обновление дат (если переданы)
+        if (bookingDetails.getStartDateString() != null && bookingDetails.getEndDateString() != null) {
+            bookingDetails.parseAndValidateDates();
+            checkCarAvailability(carsToCheck, bookingDetails.getStartDate(), bookingDetails.getEndDate(), id);
 
-        if (!newStartDate.equals(booking.getStartDate())
-                || !newEndDate.equals(booking.getEndDate())) {
-            checkCarAvailability(carsToCheck, newStartDate, newEndDate, id);
-            booking.setStartDate(newStartDate);
-            booking.setEndDate(newEndDate);
+            existingBooking.setStartDateString(bookingDetails.getStartDateString());
+            existingBooking.setEndDateString(bookingDetails.getEndDateString());
         }
 
-        // Сохраняем обновления
-        Booking updatedBooking = bookingRepository.save(booking);
+        // 7. Сохранение обновленного бронирования
+        Booking updatedBooking = bookingRepository.save(existingBooking);
         bookingCache.put(updatedBooking.getId(), updatedBooking);
         return updatedBooking;
     }
 
+    public List<Booking> getBookingsForOwner(String ownerUsername) {
+        List<Car> ownerCars = carRepository.findByOwner_Username(ownerUsername);
+
+        return bookingRepository.findAll().stream()
+                .filter(booking -> booking.getCars().stream()
+                        .anyMatch(car -> car.getOwner().getUsername().equals(ownerUsername)))
+                .collect(Collectors.toList());
+    }
+
+   /* public List<Booking> getBookingsByUsername(String username) {
+        return bookingRepository.findByOwnerUsername(username);
+    }*/
     private void checkCarAvailability(List<Long> carIds, LocalDate startDate, LocalDate endDate) {
+        if (startDate == null || endDate == null) {
+            throw new IllegalArgumentException("Даты начала и окончания обязательны");
+        }
         checkCarAvailability(carIds, startDate, endDate, null);
+    }
+
+    public List<Booking> getBookingsForRenter(String renterUsername) {
+        return bookingRepository.findAll().stream()
+                .filter(booking -> booking.getRenter().getUsername().equals(renterUsername))
+                .collect(Collectors.toList());
     }
 
     private void checkCarAvailability(List<Long> carIds, LocalDate startDate,
@@ -158,7 +219,10 @@ public class BookingService {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new NotFound("Booking not found with ID: " + id));
 
-
+        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
+        if (!booking.getRenter().getUsername().equals(currentUsername)) {
+            throw new AccessDeniedException("Вы можете удалять только свои брони");
+        }
 
         // Удаляем связи с машинами
         for (Car car : booking.getCars()) {

@@ -13,6 +13,8 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.access.AccessDeniedException;
 
 @Slf4j
 @Service
@@ -51,6 +53,10 @@ public class CarService {
         return car;
     }
 
+    public List<Car> getCarsByUsername(String username) {
+        return carRepository.findByOwner_Username(username);
+    }
+
     // Получаем машины по бренду
     public List<Car> getCarsByBrand(String brand) {
         return carRepository.findByBrandIgnoreCase(brand);
@@ -85,6 +91,11 @@ public class CarService {
                     .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
         }
 
+        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
+        if (!car.getOwner().getUsername().equals(currentUsername)) {
+            throw new AccessDeniedException("Вы можете редактировать только свои машины");
+        }
+
         // Обновляем поля машины
         car.setBrand(carDetails.getBrand());
         car.setModel(carDetails.getModel());
@@ -104,6 +115,11 @@ public class CarService {
         if (car == null) {
             car = carRepository.findById(id)
                     .orElseThrow(() -> new NotFound("Car not found with ID: " + id));
+        }
+
+        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
+        if (!car.getOwner().getUsername().equals(currentUsername)) {
+            throw new AccessDeniedException("Вы можете удалять только свои машины");
         }
 
         // Удаляем все бронирования, связанные с машиной

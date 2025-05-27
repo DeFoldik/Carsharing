@@ -28,4 +28,5 @@ public interface CarRepository extends JpaRepository<Car, Long> {
             + "WHERE o.name = :ownerName", nativeQuery = true)
     List<Car> findByOwnerNameNative(@Param("ownerName") String ownerName);
 
+    List<Car> findByOwner_Username(String username);
 }

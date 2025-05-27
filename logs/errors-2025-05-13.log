@@ -1,0 +1,50 @@
+2025-05-13 04:14:30.952 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2
+2025-05-13 04:47:39.453 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
+2025-05-13 04:47:40.904 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
+2025-05-13 04:47:41.656 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
+2025-05-13 04:47:42.144 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
+2025-05-13 04:47:42.370 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: M4
+2025-05-13 04:48:14.121 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:08:06.822 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: la
+2025-05-13 05:08:08.367 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: la
+2025-05-13 05:08:10.440 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: la
+2025-05-13 05:37:52.685 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:37:53.785 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:52:42.853 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:52:43.975 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:53:04.404 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:53:14.047 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:53:37.184 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMW M5
+2025-05-13 05:53:38.193 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMW M5
+2025-05-13 05:53:47.582 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
+2025-05-13 05:53:48.481 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
+2025-05-13 05:53:48.710 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
+2025-05-13 05:53:50.052 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: udjs Audi
+2025-05-13 05:53:51.733 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 05:55:15.180 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Q5
+2025-05-13 05:55:16.408 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Q5
+2025-05-13 05:55:18.493 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:08:46.309 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:10:15.095 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
+2025-05-13 06:10:16.180 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
+2025-05-13 06:10:16.899 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
+2025-05-13 06:10:17.095 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ПП
+2025-05-13 06:10:25.900 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:16:36.508 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:21:06.233 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:32:27.346 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:35:43.187 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:36:08.190 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:37:31.188 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:52:47.368 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: jkg
+2025-05-13 06:53:29.853 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:53:30.912 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:53:31.760 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:53:34.308 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:53:47.548 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: 
+2025-05-13 06:55:37.295 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: ЦЦ
+2025-05-13 09:12:44.596 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2
+2025-05-13 09:12:51.572 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: Toyota
+2025-05-13 09:25:10.500 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2
+2025-05-13 11:18:42.204 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: K
+2025-05-13 18:04:43.348 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCarById(..), Message: Car not found with ID: 2

@@ -1,0 +1,812 @@
+2025-05-26 12:05:24.569 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-26 12:05:24.609 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 8224 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 12:05:24.610 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 12:05:24.659 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-26 12:05:24.659 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-26 12:05:25.971 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 12:05:26.029 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2025-05-26 12:05:26.918 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 12:05:26.930 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 12:05:26.932 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 12:05:26.932 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 12:05:26.974 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 12:05:26.974 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2315 ms
+2025-05-26 12:05:27.209 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 12:05:27.273 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-26 12:05:27.309 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 12:05:27.690 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 12:05:27.718 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 12:05:27.883 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec36d9c
+2025-05-26 12:05:27.885 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 12:05:27.938 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 12:05:27.940 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 12:05:27.955 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 12:05:29.066 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 12:05:29.154 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 12:05:29.643 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-26 12:05:31.493 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 12:05:32.614 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 12:05:34.147 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 12:05:34.180 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 12:05:34.196 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 12:05:34.205 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 10.055 seconds (process running for 14.901)
+2025-05-26 12:07:10.051 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 12:07:10.051 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 12:07:10.053 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-05-26 12:07:10.143 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 12:08:00.654 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 12:08:01.835 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 12:08:20.625 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 12:10:16.134 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 6 to cache 
+2025-05-26 12:10:51.382 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 7 to cache 
+2025-05-26 12:11:16.406 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 8 to cache 
+2025-05-26 12:11:47.267 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 12:12:47.110 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 1 not found in cache
+2025-05-26 12:12:47.112 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 1 to cache 
+2025-05-26 12:13:31.335 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 15 to cache 
+2025-05-26 12:13:39.881 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 15 from cache (frequency: 2)
+2025-05-26 12:13:39.888 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 15 in cache (frequency: 3)
+2025-05-26 12:13:58.891 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 15 from cache (frequency: 4)
+2025-05-26 12:13:58.893 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 15 in cache (frequency: 5)
+2025-05-26 13:31:21.079 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h13m21s847ms522µs900ns).
+2025-05-26 13:47:41.614 [http-nio-8080-exec-6] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 12 not found in cache
+2025-05-26 13:47:41.617 [http-nio-8080-exec-6] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 12 to cache 
+2025-05-26 13:47:54.362 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 12 from cache (frequency: 2)
+2025-05-26 13:47:54.364 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 12 in cache (frequency: 3)
+2025-05-26 13:48:04.808 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 12 from cache (frequency: 4)
+2025-05-26 13:48:04.810 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 12 in cache (frequency: 5)
+2025-05-26 13:49:08.387 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 13:49:09.791 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 13:49:10.582 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] ]
+2025-05-26 13:49:10.752 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 13:49:10.970 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 13:51:59.129 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 13:55:51.271 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] ]
+2025-05-26 13:56:03.318 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 13:56:04.916 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [3] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.updateBooking(java.lang.Long,java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 13:59:12.066 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 5 not found in cache
+2025-05-26 13:59:12.073 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 5 to cache 
+2025-05-26 13:59:27.495 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 5 from cache (frequency: 2)
+2025-05-26 13:59:27.500 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 5 in cache (frequency: 3)
+2025-05-26 13:59:57.676 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 5 from cache (frequency: 4)
+2025-05-26 13:59:57.683 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 5 in cache (frequency: 5)
+2025-05-26 14:00:14.807 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 5 from cache (frequency: 6)
+2025-05-26 14:00:14.814 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 5 in cache (frequency: 7)
+2025-05-26 14:07:45.722 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 3 not found in cache
+2025-05-26 14:07:45.726 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 3 to cache 
+2025-05-26 17:30:32.895 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h22m41s216ms187µs800ns).
+2025-05-26 17:43:51.977 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 13 not found in cache
+2025-05-26 17:43:51.980 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 13 to cache 
+2025-05-26 18:21:34.643 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 7 from cache
+2025-05-26 18:56:10.491 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m40s922ms497µs600ns).
+2025-05-26 19:00:15.021 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 5 from cache
+2025-05-26 19:00:18.069 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 3 from cache
+2025-05-26 19:00:20.801 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 6 from cache
+2025-05-26 19:00:23.796 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 8 from cache
+2025-05-26 19:00:35.371 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 9 to cache 
+2025-05-26 19:00:52.820 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 2)
+2025-05-26 19:00:52.824 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 3)
+2025-05-26 19:05:42.723 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 19:05:59.290 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 19:06:15.804 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 4)
+2025-05-26 19:06:15.809 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 5)
+2025-05-26 19:10:11.259 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 19:10:32.104 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 19:10:33.464 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 19:10:45.104 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] ]
+2025-05-26 19:12:37.644 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 16 to cache 
+2025-05-26 19:12:55.930 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 15 from cache (frequency: 6)
+2025-05-26 19:12:55.943 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 15 from cache
+2025-05-26 19:13:06.514 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 14 not found in cache
+2025-05-26 19:13:06.515 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 14 to cache 
+2025-05-26 19:15:17.905 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 12 from cache (frequency: 6)
+2025-05-26 19:15:17.906 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 12 from cache
+2025-05-26 19:59:58.811 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m51s952ms333µs600ns).
+2025-05-26 20:09:13.447 [http-nio-8080-exec-6] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 6)
+2025-05-26 20:09:13.449 [http-nio-8080-exec-6] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 7)
+2025-05-26 20:09:29.956 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:10:06.778 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:10:32.670 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:10:32.903 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:10:59.342 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 8)
+2025-05-26 20:10:59.347 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 9)
+2025-05-26 20:11:24.559 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 10)
+2025-05-26 20:11:24.566 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 11)
+2025-05-26 20:11:42.322 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 12)
+2025-05-26 20:11:42.326 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 13)
+2025-05-26 20:12:14.195 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 14)
+2025-05-26 20:12:14.199 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 15)
+2025-05-26 20:16:28.567 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 16)
+2025-05-26 20:16:28.575 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 17)
+2025-05-26 20:17:13.438 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 9 from cache (frequency: 18)
+2025-05-26 20:17:13.445 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 9 in cache (frequency: 19)
+2025-05-26 20:25:26.716 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-26 20:25:26.730 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 20:25:26.732 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:25:26.748 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 20:25:26.749 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:25:26.758 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 20:25:26.768 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 20:25:26.770 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 20:25:26.936 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 8224 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 20:25:26.936 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 20:25:27.487 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 20:25:27.497 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type com.carsharing.carsharing.model.Booking not present
+2025-05-26 20:25:27.501 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-26 20:25:27.528 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failedjava.lang.TypeNotPresentException: Type com.carsharing.carsharing.model.Booking not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:116)
+Caused by: java.lang.ClassNotFoundException: com.carsharing.carsharing.model.Booking
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+
+2025-05-26 20:25:32.077 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 8224 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 20:25:32.078 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 20:25:32.435 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 20:25:32.452 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+2025-05-26 20:25:32.738 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 20:25:32.739 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:25:32.740 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 20:25:32.740 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 20:25:32.756 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 20:25:32.756 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 676 ms
+2025-05-26 20:25:32.830 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 20:25:32.832 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 20:25:32.847 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 20:25:32.848 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-26 20:25:32.851 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e20b4f7
+2025-05-26 20:25:32.851 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-26 20:25:32.852 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 20:25:32.852 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 20:25:32.852 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 20:25:33.053 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 20:25:33.095 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 20:25:33.486 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 20:25:33.770 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 20:25:34.468 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 20:25:34.482 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:25:34.486 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 20:25:34.487 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 20:25:34.487 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 20:25:34.488 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-26 20:25:34.491 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 2.462 seconds (process running for 30023.25)
+2025-05-26 20:25:34.493 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 20:25:34.493 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-26 20:25:34.497 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 20:26:03.117 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 9 not found in cache
+2025-05-26 20:26:03.123 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 9 to cache 
+2025-05-26 20:26:22.245 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:26:54.941 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:26:55.101 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:26:55.287 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:26:55.508 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:27:19.116 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-26 20:27:19.117 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 20:27:19.118 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:27:19.130 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 20:27:19.130 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:27:19.133 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 20:27:19.133 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-05-26 20:27:19.135 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-05-26 20:27:19.220 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 8224 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 20:27:19.221 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 20:27:19.888 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 20:27:19.907 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+2025-05-26 20:27:20.174 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 20:27:20.175 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:27:20.175 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 20:27:20.175 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 20:27:20.196 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 20:27:20.196 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 974 ms
+2025-05-26 20:27:20.330 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 20:27:20.334 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 20:27:20.344 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 20:27:20.346 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-05-26 20:27:20.350 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@608e96d7
+2025-05-26 20:27:20.351 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-05-26 20:27:20.351 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 20:27:20.351 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 20:27:20.353 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 20:27:20.453 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 20:27:20.480 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 20:27:20.779 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 20:27:21.062 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 20:27:21.766 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 20:27:21.777 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 20:27:21.780 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 20:27:21.784 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 2.59 seconds (process running for 30130.543)
+2025-05-26 20:27:21.785 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-26 20:27:21.799 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 20:27:21.800 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 20:27:21.805 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-05-26 20:27:21.830 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 20:27:39.663 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:31:31.382 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 22 to cache 
+2025-05-26 20:31:55.980 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 23 to cache 
+2025-05-26 20:32:18.220 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 24 to cache 
+2025-05-26 20:32:28.654 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:33:10.528 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 23 from cache (frequency: 2)
+2025-05-26 20:33:10.531 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 23 in cache (frequency: 3)
+2025-05-26 20:38:13.248 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 23 from cache (frequency: 4)
+2025-05-26 20:38:13.250 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 23 in cache (frequency: 5)
+2025-05-26 20:38:28.666 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 24 from cache (frequency: 2)
+2025-05-26 20:38:28.674 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 24 in cache (frequency: 3)
+2025-05-26 20:38:55.432 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 22 from cache (frequency: 2)
+2025-05-26 20:38:55.436 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 22 in cache (frequency: 3)
+2025-05-26 20:39:11.368 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 26 to cache 
+2025-05-26 20:39:56.040 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 26 from cache
+2025-05-26 20:40:07.269 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 24 from cache (frequency: 4)
+2025-05-26 20:40:07.271 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 24 in cache (frequency: 5)
+2025-05-26 20:41:16.957 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 22 from cache
+2025-05-26 20:41:20.076 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 24 from cache
+2025-05-26 20:41:22.853 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 23 from cache
+2025-05-26 20:42:00.453 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 27 to cache 
+2025-05-26 20:42:18.082 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 28 to cache 
+2025-05-26 20:42:32.209 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 20:42:40.958 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 30 to cache 
+2025-05-26 20:42:58.997 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LruCache - Cache hit: Retrieved item with key 30 from cache (frequency: 2)
+2025-05-26 20:42:59.000 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LruCache - Cache update: Updated item with key 30 in cache (frequency: 3)
+2025-05-26 20:55:59.583 [http-nio-8080-exec-7] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 31 to cache 
+2025-05-26 20:56:18.852 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 2 уже забронирована на указанные даты]
+2025-05-26 20:56:19.685 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 2 уже забронирована на указанные даты]
+2025-05-26 20:56:30.523 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 2 уже забронирована на указанные даты]
+2025-05-26 20:56:32.831 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 2 уже забронирована на указанные даты]
+2025-05-26 20:56:34.125 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 2 уже забронирована на указанные даты]
+2025-05-26 20:56:52.174 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 37 to cache 
+2025-05-26 21:19:17.580 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 37 from cache
+2025-05-26 21:19:20.019 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 30 from cache
+2025-05-26 21:19:23.065 [http-nio-8080-exec-5] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 28 from cache
+2025-05-26 21:19:26.079 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 27 from cache
+2025-05-26 21:19:29.088 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 31 from cache
+2025-05-26 21:19:38.887 [http-nio-8080-exec-3] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 38 to cache 
+2025-05-26 21:20:13.223 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+
+2025-05-26 21:27:14.462 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 21:27:34.914 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Машина с ID 1 уже забронирована на указанные даты]
+2025-05-26 21:43:46.236 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-26 21:43:46.237 [Thread-14] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 21:43:46.238 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:43:46.255 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 21:43:46.255 [Thread-14] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:43:46.258 [Thread-14] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 21:43:46.260 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-05-26 21:43:46.264 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-05-26 21:43:46.406 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 8224 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 21:43:46.406 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 21:43:46.936 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 21:43:46.954 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2025-05-26 21:43:47.214 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 21:43:47.216 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:43:47.216 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 21:43:47.216 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 21:43:47.232 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 21:43:47.232 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 822 ms
+2025-05-26 21:43:47.360 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 21:43:47.363 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 21:43:47.375 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 21:43:47.376 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-05-26 21:43:47.381 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c018320
+2025-05-26 21:43:47.381 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-05-26 21:43:47.382 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 21:43:47.382 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 21:43:47.383 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 21:43:47.548 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 21:43:47.585 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 21:43:47.872 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 21:43:48.203 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 21:43:48.968 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 21:43:48.982 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:43:48.989 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 21:43:48.993 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 2.659 seconds (process running for 34717.751)
+2025-05-26 21:43:48.994 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-26 21:43:49.038 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 21:43:49.038 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 21:43:49.039 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-26 21:43:49.041 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 21:43:49.045 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 21:44:05.066 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-05-26 21:44:05.066 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-05-26 21:44:35.079 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2025-05-26 21:44:35.079 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-05-26 21:44:51.615 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 21:44:51.631 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 21:44:51.634 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 21:44:51.634 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-05-26 21:44:51.636 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-05-26 21:44:54.899 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-26 21:44:54.951 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 21348 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 21:44:54.952 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 21:44:55.030 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-26 21:44:55.030 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-26 21:44:56.279 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 21:44:56.383 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2025-05-26 21:44:57.411 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 21:44:57.420 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:44:57.422 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 21:44:57.422 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 21:44:57.478 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 21:44:57.479 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2447 ms
+2025-05-26 21:44:57.710 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 21:44:57.791 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-26 21:44:57.827 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 21:44:58.147 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 21:44:58.187 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 21:44:58.336 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f5648bf
+2025-05-26 21:44:58.338 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 21:44:58.382 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 21:44:58.384 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 21:44:58.400 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 21:44:59.563 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 21:44:59.696 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 21:45:00.076 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-26 21:45:00.912 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 21:45:01.816 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 21:45:03.862 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 21:45:03.911 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:45:03.955 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 21:45:03.966 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 9.582 seconds (process running for 11.601)
+2025-05-26 21:45:20.358 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 21:45:20.373 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 21:45:20.380 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 21:45:20.385 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 21:45:20.394 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 21:45:24.960 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-26 21:45:25.005 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 4716 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 21:45:25.005 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 21:45:25.059 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-26 21:45:25.059 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-26 21:45:25.925 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 21:45:25.985 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2025-05-26 21:45:26.925 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 21:45:26.948 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:45:26.950 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 21:45:26.950 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 21:45:26.998 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 21:45:26.999 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1939 ms
+2025-05-26 21:45:27.211 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 21:45:27.497 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-26 21:45:27.542 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 21:45:27.853 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 21:45:27.898 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 21:45:28.046 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44fd2067
+2025-05-26 21:45:28.048 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 21:45:28.085 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 21:45:28.086 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 21:45:28.102 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 21:45:28.890 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 21:45:28.962 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 21:45:29.240 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-26 21:45:29.748 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 21:45:30.758 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 21:45:31.678 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 21:45:31.702 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 21:45:31.716 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 21:45:31.722 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 7.329 seconds (process running for 8.129)
+2025-05-26 21:45:53.307 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 21:45:53.308 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 21:45:53.309 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-26 21:45:53.712 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 21:47:20.803 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 38 not found in cache
+2025-05-26 21:47:20.826 [http-nio-8080-exec-2] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 38 to cache 
+2025-05-26 21:47:43.239 [http-nio-8080-exec-8] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 41 to cache 
+2025-05-26 21:48:37.692 [http-nio-8080-exec-10] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 17 to cache 
+2025-05-26 23:14:58.440 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m30s232ms565µs).
+2025-05-26 23:18:01.180 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 23:18:01.188 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 23:18:01.196 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:18:01.196 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 23:18:01.204 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 23:18:10.426 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-26 23:18:10.466 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 14992 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 23:18:10.466 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 23:18:10.508 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-26 23:18:10.508 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-26 23:18:11.319 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 23:18:11.369 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+2025-05-26 23:18:12.232 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 23:18:12.248 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:12.256 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 23:18:12.256 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 23:18:12.310 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 23:18:12.310 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1802 ms
+2025-05-26 23:18:12.518 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 23:18:12.558 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-26 23:18:12.582 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 23:18:12.814 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 23:18:12.846 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 23:18:12.957 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76642dc7
+2025-05-26 23:18:12.959 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 23:18:12.986 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 23:18:12.994 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 23:18:13.002 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 23:18:13.818 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 23:18:13.904 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:18:14.200 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-26 23:18:14.726 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 23:18:15.555 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 23:18:16.400 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 23:18:16.416 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:16.432 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 23:18:16.440 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 6.411 seconds (process running for 7.874)
+2025-05-26 23:18:16.520 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 23:18:16.520 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 23:18:16.520 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-26 23:18:16.599 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 23:18:16.607 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 23:18:25.045 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:18:41.692 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:18:42.619 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-26 23:18:42.619 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 23:18:42.619 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:42.635 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 23:18:42.635 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:42.643 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:18:42.643 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 23:18:42.651 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 23:18:42.734 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 14992 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 23:18:42.734 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 23:18:42.922 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 23:18:42.938 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2025-05-26 23:18:43.089 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 23:18:43.089 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:43.089 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 23:18:43.089 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 23:18:43.105 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 23:18:43.105 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 371 ms
+2025-05-26 23:18:43.161 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 23:18:43.169 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 23:18:43.177 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 23:18:43.177 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-26 23:18:43.177 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18d9875
+2025-05-26 23:18:43.177 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-26 23:18:43.177 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 23:18:43.177 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 23:18:43.177 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 23:18:43.273 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 23:18:43.319 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:18:43.515 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 23:18:43.695 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 23:18:44.317 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 23:18:44.333 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:44.333 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 23:18:44.333 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 1.631 seconds (process running for 35.771)
+2025-05-26 23:18:44.333 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-26 23:18:44.373 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 23:18:44.373 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 23:18:44.373 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-26 23:18:44.373 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:18:51.867 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-26 23:18:51.867 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 23:18:51.867 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:51.883 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 23:18:51.883 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:51.883 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:18:51.883 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-05-26 23:18:51.883 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-05-26 23:18:51.963 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 14992 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 23:18:51.963 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 23:18:52.152 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 23:18:52.160 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.NoClassDefFoundError: com/carsharing/carsharing/model/Car
+2025-05-26 23:18:52.160 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-26 23:18:52.176 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failedjava.lang.NoClassDefFoundError: com/carsharing/carsharing/model/Car
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+Caused by: java.lang.ClassNotFoundException: com.carsharing.carsharing.model.Car
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+
+2025-05-26 23:18:54.971 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-26 23:18:55.012 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 12424 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 23:18:55.012 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 23:18:55.056 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-26 23:18:55.056 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-26 23:18:55.681 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 23:18:55.721 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2025-05-26 23:18:56.322 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 23:18:56.338 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:18:56.338 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 23:18:56.338 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 23:18:56.370 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 23:18:56.370 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1314 ms
+2025-05-26 23:18:56.534 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 23:18:56.578 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-05-26 23:18:56.602 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 23:18:56.792 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 23:18:56.824 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 23:18:56.929 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b06b7db
+2025-05-26 23:18:56.929 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 23:18:56.970 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 23:18:56.970 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 23:18:56.978 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 23:18:57.786 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 23:18:57.868 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:18:58.170 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-26 23:18:58.915 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 23:18:59.838 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 23:19:00.743 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 23:19:00.759 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:19:00.775 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 23:19:00.783 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 6.184 seconds (process running for 6.907)
+2025-05-26 23:19:00.823 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 23:19:00.823 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 23:19:00.823 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-26 23:19:00.897 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:00.953 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:01.136 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:01.320 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:01.516 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:01.692 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:01.864 [http-nio-8080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:02.064 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:02.272 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:19:02.442 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:20:00.520 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-26 23:20:00.520 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 23:20:00.520 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:20:00.536 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 23:20:00.536 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:20:00.544 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:20:00.544 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 23:20:00.552 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 23:20:00.624 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 12424 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 23:20:00.624 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 23:20:00.807 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 23:20:00.815 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+2025-05-26 23:20:00.965 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 23:20:00.965 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:20:00.965 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 23:20:00.965 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 23:20:00.981 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 23:20:00.981 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 357 ms
+2025-05-26 23:20:01.037 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 23:20:01.045 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 23:20:01.045 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 23:20:01.053 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-26 23:20:01.053 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6acadcac
+2025-05-26 23:20:01.053 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-26 23:20:01.053 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 23:20:01.053 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 23:20:01.053 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 23:20:01.125 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 23:20:01.152 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:20:01.391 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 23:20:01.585 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 23:20:02.091 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 23:20:02.099 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:20:02.099 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 23:20:02.099 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 1.499 seconds (process running for 68.226)
+2025-05-26 23:20:02.107 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-26 23:20:02.372 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 23:20:02.372 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 23:20:02.380 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2025-05-26 23:20:48.688 [http-nio-8080-exec-6] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 42 to cache 
+2025-05-26 23:21:00.381 [http-nio-8080-exec-9] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 42 from cache
+2025-05-26 23:22:02.841 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache miss: Item with key 1 not found in cache
+2025-05-26 23:22:02.841 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 1 to cache 
+2025-05-26 23:29:08.341 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-26 23:29:08.341 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 23:29:08.341 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:08.358 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 23:29:08.358 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:08.358 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:29:08.358 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-05-26 23:29:08.367 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-05-26 23:29:08.467 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 12424 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 23:29:08.467 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 23:29:08.729 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 23:29:08.745 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2025-05-26 23:29:08.922 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 23:29:08.922 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:08.922 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 23:29:08.922 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 23:29:08.938 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 23:29:08.938 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 471 ms
+2025-05-26 23:29:09.018 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 23:29:09.023 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 23:29:09.031 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 23:29:09.031 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-05-26 23:29:09.031 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a67acd7
+2025-05-26 23:29:09.031 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-05-26 23:29:09.031 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 23:29:09.031 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 23:29:09.031 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 23:29:09.143 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 23:29:09.159 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:29:09.413 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 23:29:09.649 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 23:29:10.136 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 23:29:10.152 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:10.152 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 23:29:10.152 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 1.726 seconds (process running for 616.278)
+2025-05-26 23:29:10.152 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-26 23:29:11.565 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-05-26 23:29:11.565 [Thread-11] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 23:29:11.565 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:11.581 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 23:29:11.581 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:11.581 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:29:11.581 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-05-26 23:29:11.581 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-05-26 23:29:11.661 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Starting CarsharingApplication using Java 23.0.2 with PID 12424 (C:\PNAYAVU_sem2\Carsharing\target\classes started by topmo in C:\PNAYAVU_sem2\Carsharing)
+2025-05-26 23:29:11.661 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 23:29:11.798 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26 23:29:11.806 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2025-05-26 23:29:11.961 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-26 23:29:11.961 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:11.961 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 23:29:11.961 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-05-26 23:29:11.970 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 23:29:11.970 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 309 ms
+2025-05-26 23:29:12.034 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26 23:29:12.042 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 23:29:12.042 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26 23:29:12.042 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-05-26 23:29:12.049 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f62251
+2025-05-26 23:29:12.049 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-05-26 23:29:12.049 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 23:29:12.049 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-26 23:29:12.049 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-26 23:29:12.145 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 23:29:12.168 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26 23:29:12.363 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-05-26 23:29:12.532 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26 23:29:13.067 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-26 23:29:13.075 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-26 23:29:13.075 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-26 23:29:13.083 [restartedMain] INFO  c.c.carsharing.CarsharingApplication - Started CarsharingApplication in 1.446 seconds (process running for 619.203)
+2025-05-26 23:29:13.083 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-26 23:34:38.601 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 23:34:38.601 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 23:34:38.601 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-26 23:35:18.538 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] ]
+2025-05-26 23:38:02.134 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] ]
+2025-05-26 23:38:03.586 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'endDateString': rejected value [null]; codes [NotBlank.booking.endDateString,NotBlank.endDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Дата окончания обязательна]] [Field error in object 'booking' on field 'startDateString': rejected value [null]; codes [NotBlank.booking.startDateString,NotBlank.startDateString,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Дата начала обязательна]] ]
+2025-05-26 23:39:29.932 [http-nio-8080-exec-1] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 43 to cache 
+2025-05-26 23:39:47.397 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 23:39:47.397 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:399)
+
+2025-05-26 23:39:51.276 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null] with root causejava.lang.NullPointerException: Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+	at com.carsharing.carsharing.controller.AuthController.getCurrentUser(AuthController.java:81)
+
+2025-05-26 23:42:45.324 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache remove: Removed item with key 43 from cache
+2025-05-26 23:43:02.509 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'startDateString': rejected value [Su.06.yyyy]; codes [ValidDateFormat.booking.startDateString,ValidDateFormat.startDateString,ValidDateFormat.java.lang.String,ValidDateFormat]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Неверный формат даты. Используйте dd.MM.yyyy]] [Field error in object 'booking' on field 'endDateString': rejected value [We.06.yyyy]; codes [ValidDateFormat.booking.endDateString,ValidDateFormat.endDateString,ValidDateFormat.java.lang.String,ValidDateFormat]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Неверный формат даты. Используйте dd.MM.yyyy]] ]
+2025-05-26 23:43:59.472 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [2] in public com.carsharing.carsharing.model.Booking com.carsharing.carsharing.controller.BookingController.createBooking(java.lang.Long,java.util.List<java.lang.Long>,com.carsharing.carsharing.model.Booking) with 2 errors: [Field error in object 'booking' on field 'endDateString': rejected value [We.06.yyyy]; codes [ValidDateFormat.booking.endDateString,ValidDateFormat.endDateString,ValidDateFormat.java.lang.String,ValidDateFormat]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.endDateString,endDateString]; arguments []; default message [endDateString]]; default message [Неверный формат даты. Используйте dd.MM.yyyy]] [Field error in object 'booking' on field 'startDateString': rejected value [Su.06.yyyy]; codes [ValidDateFormat.booking.startDateString,ValidDateFormat.startDateString,ValidDateFormat.java.lang.String,ValidDateFormat]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.startDateString,startDateString]; arguments []; default message [startDateString]]; default message [Неверный формат даты. Используйте dd.MM.yyyy]] ]
+2025-05-26 23:57:56.726 [http-nio-8080-exec-4] INFO  c.c.carsharing.cache.LruCache - Cache add: Added item with key 44 to cache 
+2025-05-26 23:59:20.990 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+
+2025-05-26 23:59:28.443 [http-nio-8080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exceptionio.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+

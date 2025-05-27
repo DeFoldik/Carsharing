@@ -1,0 +1,6 @@
+2025-05-22 23:13:55.716 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMW
+2025-05-22 23:13:59.627 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMW
+2025-05-22 23:19:44.960 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMW
+2025-05-22 23:33:01.094 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-22 23:57:21.771 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BM
+2025-05-22 23:59:54.478 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: CarController.getCars(..), Message: No cars found for brand: BMN

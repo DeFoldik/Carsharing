@@ -1,6 +1,7 @@
 package com.carsharing.carsharing.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
@@ -27,12 +28,14 @@ public class Car {
     @NotBlank(message = "Model is empty")
     private String model;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "owner_id")
     //@JsonBackReference
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "cars"})
+    //@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "cars"})
     private Owner owner;
 
+    //@JsonBackReference("car-booking")
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "car_booking",

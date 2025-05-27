@@ -1,0 +1,1 @@
+2025-05-24 03:18:55.116 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя

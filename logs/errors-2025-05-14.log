@@ -1,0 +1,39 @@
+2025-05-14 05:44:53.402 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.register(..), Message: Validation failed for classes [com.carsharing.carsharing.model.Renter] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='Name is required', propertyPath=name, rootBeanClass=class com.carsharing.carsharing.model.Renter, messageTemplate='Name is required'}
+]
+2025-05-14 05:45:19.050 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.register(..), Message: Validation failed for classes [com.carsharing.carsharing.model.Renter] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='Name is required', propertyPath=name, rootBeanClass=class com.carsharing.carsharing.model.Renter, messageTemplate='Name is required'}
+]
+2025-05-14 05:45:23.532 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.register(..), Message: Validation failed for classes [com.carsharing.carsharing.model.Renter] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='Username is required', propertyPath=username, rootBeanClass=class com.carsharing.carsharing.model.Renter, messageTemplate='Username is required'}
+	ConstraintViolationImpl{interpolatedMessage='Name is required', propertyPath=name, rootBeanClass=class com.carsharing.carsharing.model.Renter, messageTemplate='Name is required'}
+]
+2025-05-14 05:46:23.902 [http-nio-8080-exec-9] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:46:38.734 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:46:45.112 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:46:50.281 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:46:56.410 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:47:08.509 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:52:55.033 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.register(..), Message: Validation failed for classes [com.carsharing.carsharing.model.Renter] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='Password is required', propertyPath=passwordHash, rootBeanClass=class com.carsharing.carsharing.model.Renter, messageTemplate='Password is required'}
+]
+2025-05-14 05:53:17.823 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:54:26.134 [http-nio-8080-exec-10] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:54:42.284 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 05:59:14.912 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:13:35.821 [http-nio-8080-exec-7] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:13:37.117 [http-nio-8080-exec-1] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:13:38.279 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:13:39.663 [http-nio-8080-exec-6] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:13:51.192 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:13:52.377 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:14:43.198 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:16:23.836 [http-nio-8080-exec-4] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:19:07.263 [http-nio-8080-exec-5] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:19:08.334 [http-nio-8080-exec-3] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:27:33.338 [http-nio-8080-exec-8] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя
+2025-05-14 06:37:26.741 [http-nio-8080-exec-2] ERROR c.c.carsharing.aspect.LoggingAspect - Exception in method: AuthController.login(..), Message: Неверные учетные данные пользователя

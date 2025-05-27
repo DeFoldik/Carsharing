@@ -2,6 +2,7 @@ package com.carsharing.carsharing.model;
 
 import com.carsharing.carsharing.validation.ValidDateFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -31,13 +32,14 @@ public class Booking {
     @JoinColumn(name = "renter_id")
     private Renter renter;
 
+    //@JsonManagedReference("car-booking")
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "car_booking",
             joinColumns = @JoinColumn(name = "booking_id"),
             inverseJoinColumns = @JoinColumn(name = "car_id")
     )
-    @JsonIgnore
+    //@JsonIgnore
     private List<Car> cars = new ArrayList<>();
 
     @NotBlank(message = "Дата начала обязательна")
@@ -56,7 +58,7 @@ public class Booking {
 
     @PrePersist
     @PreUpdate
-    private void parseAndValidateDates() {
+    public void parseAndValidateDates() {
         if (startDateString == null || endDateString == null) {
             throw new IllegalArgumentException("Даты начала и окончания обязательны");
         }

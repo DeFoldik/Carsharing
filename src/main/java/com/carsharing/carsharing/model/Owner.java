@@ -1,5 +1,6 @@
 package com.carsharing.carsharing.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.DiscriminatorValue;
@@ -12,13 +13,14 @@ import java.util.List;
 @DiscriminatorValue("OWNER")
 public class Owner extends User {
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonManagedReference
+    @JsonIgnore
+    //@JsonManagedReference
     private List<Car> cars;
 
     public Owner() {}
 
-    public Owner(String name) {
-        super(name);
+    public Owner(String username, String passwordHash, String name) {
+        super(username, passwordHash, name);
     }
 
     public List<Car> getCars() {
