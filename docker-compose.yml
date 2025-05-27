@@ -32,6 +32,15 @@ services:
       mysql:
         condition: service_healthy
 
+  frontend:
+    build:
+       context: ./../carsharing_front/carsharing_front
+       dockerfile: Dockerfile
+    container_name: carsharing-frontend
+    ports:
+        - "5000:80"
+    depends_on:
+        - backend
 
 volumes:
   mysql_data:
